@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Environments and local configuration
+.venv/
+venv/
+.env
+
+# Build and editor files
+build/
+dist/
+*.egg-info/
+.DS_Store
+.vscode/
