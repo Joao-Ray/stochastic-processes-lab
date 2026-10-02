@@ -45,6 +45,7 @@ def test_running_mean_and_rmse_have_known_values() -> None:
     [
         lambda: estimate_pi(0, np.random.default_rng()),
         lambda: replicate_pi_estimates(10, 0, np.random.default_rng()),
+        lambda: estimate_integral(lambda x: x, 0, 1, 1, np.random.default_rng()),
         lambda: estimate_integral(lambda x: x, 1, 0, 10, np.random.default_rng()),
         lambda: estimate_integral(lambda x: 1.0, 0, 1, 10, np.random.default_rng()),
         lambda: running_mean(np.array([])),

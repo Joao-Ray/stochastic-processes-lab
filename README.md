@@ -4,7 +4,7 @@ Numerical experiments and visualizations for stochastic processes, probability, 
 
 This undergraduate mathematics project connects **mathematical theory → numerical simulation → empirical verification**. All five core experiments are complete.
 
-## Planned experiments
+## Experiments
 
 1. [Random Walk](notebooks/01_random_walk.ipynb) — complete
 2. [Poisson Process](notebooks/02_poisson_process.ipynb) — complete
@@ -13,6 +13,8 @@ This undergraduate mathematics project connects **mathematical theory → numeri
 5. [Monte Carlo Methods](notebooks/05_monte_carlo.ipynb) — complete
 
 Each notebook uses the same eight sections: Problem, Mathematical Background, Theoretical Result, Numerical Experiment, Visualization, Comparison with Theory, Interpretation, and Limitations. Experiments state the mathematical question, derive or cite the theoretical result, run a numerical simulation with a fixed random seed, and explain how the results compare with theory.
+
+The [mathematical notes and review guide](notes/mathematical_notes.md) collects the main derivations, connects each formula to its implementation, and provides questions to answer before creating a release.
 
 ## Random Walk results
 
@@ -54,7 +56,29 @@ Using 1,000,000 uniform samples, the experiment estimated $\pi$ as **3.140864**,
 
 See also [$\pi$ convergence](figures/monte_carlo_pi_convergence.png) and [the CLT and numerical integration](figures/monte_carlo_clt_and_integral.png).
 
-To reproduce an experiment, install the packages in `requirements.txt`, open its notebook, and run the cells from top to bottom. Run tests with `pytest` from the repository root.
+## Reproduce the experiments
+
+Create a virtual environment and install the dependencies:
+
+```bash
+python -m venv .venv
+source .venv/bin/activate  # Windows: .venv\Scripts\activate
+python -m pip install -r requirements.txt
+```
+
+Start Jupyter Lab, open a notebook, and run its cells from top to bottom:
+
+```bash
+jupyter lab
+```
+
+Run the complete test suite from the repository root:
+
+```bash
+python -m pytest -q
+```
+
+Fixed random seeds reproduce the reported runs. Small changes to a seed produce different individual samples while preserving the theoretical comparisons at a sufficiently large scale.
 
 ## Project layout
 

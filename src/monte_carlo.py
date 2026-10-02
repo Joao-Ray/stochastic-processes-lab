@@ -55,6 +55,8 @@ def estimate_integral(
 ) -> tuple[float, float]:
     """Estimate an integral by uniform sampling and return estimate and SE."""
     samples = _validate_positive_integer(n_samples, "n_samples")
+    if samples < 2:
+        raise ValueError("n_samples must be at least two to estimate standard error")
     if not np.isfinite(lower + upper) or upper <= lower:
         raise ValueError("integration bounds must be finite with lower < upper")
     points = rng.uniform(lower, upper, size=samples)
