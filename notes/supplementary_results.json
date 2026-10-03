@@ -1,0 +1,391 @@
+{
+  "versions": {
+    "python": "3.14.7",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2"
+  },
+  "ou": {
+    "theta": 0.7,
+    "mu": 1.5,
+    "sigma": 0.8,
+    "x0": -1.0,
+    "horizon": 4.0,
+    "paths_per_combination": 60000,
+    "batches": 3,
+    "seeds": [
+      61000,
+      61001,
+      61002,
+      61010,
+      61011,
+      61012,
+      61100,
+      61101,
+      61102,
+      61110,
+      61111,
+      61112,
+      61200,
+      61201,
+      61202,
+      61210,
+      61211,
+      61212,
+      61300,
+      61301,
+      61302,
+      61310,
+      61311,
+      61312,
+      61400,
+      61401,
+      61402,
+      61410,
+      61411,
+      61412,
+      61500,
+      61501,
+      61502,
+      61510,
+      61511,
+      61512
+    ],
+    "target_mean": 1.3479748434369552,
+    "target_variance": 0.4554524051581793,
+    "analytic_bias_slope": 1.023623949483657,
+    "rows": [
+      {
+        "method": "Euler",
+        "dt": 1.0,
+        "sample_mean": 1.482839206218113,
+        "theory_mean": 1.47975,
+        "sample_variance": 0.6997733300796406,
+        "theory_variance": 0.7032505600000002,
+        "ci_lower": 0.6919217543644616,
+        "ci_upper": 0.7077599383430115
+      },
+      {
+        "method": "Exact",
+        "dt": 1.0,
+        "sample_mean": 1.3465764625012957,
+        "theory_mean": 1.3479748434369552,
+        "sample_variance": 0.4535069477247082,
+        "theory_variance": 0.4554524051581793,
+        "ci_lower": 0.4484185226813944,
+        "ci_upper": 0.4586828842465845
+      },
+      {
+        "method": "Euler",
+        "dt": 0.5,
+        "sample_mean": 1.4220255504049473,
+        "theory_mean": 1.4203387967773438,
+        "sample_variance": 0.5491213807172104,
+        "theory_variance": 0.5535499386083071,
+        "ci_lower": 0.5429601454826036,
+        "ci_upper": 0.5553885777770506
+      },
+      {
+        "method": "Exact",
+        "dt": 0.5,
+        "sample_mean": 1.340744133442507,
+        "theory_mean": 1.3479748434369552,
+        "sample_variance": 0.45512763267256323,
+        "theory_variance": 0.4554524051581793,
+        "ci_lower": 0.4500210232686408,
+        "ci_upper": 0.4603220662923433
+      },
+      {
+        "method": "Euler",
+        "dt": 0.25,
+        "sample_mean": 1.3857895971179053,
+        "theory_mean": 1.3848661081014109,
+        "sample_variance": 0.49557509131569305,
+        "theory_variance": 0.49991593326205513,
+        "ci_lower": 0.49001465455029203,
+        "ci_upper": 0.5012311572863298
+      },
+      {
+        "method": "Exact",
+        "dt": 0.25,
+        "sample_mean": 1.3473161459559284,
+        "theory_mean": 1.3479748434369552,
+        "sample_variance": 0.45177068267277093,
+        "theory_variance": 0.4554524051581793,
+        "ci_lower": 0.44670173881848074,
+        "ci_upper": 0.45692680296528393
+      },
+      {
+        "method": "Euler",
+        "dt": 0.125,
+        "sample_mean": 1.3676959754072502,
+        "theory_mean": 1.3665274527601998,
+        "sample_variance": 0.48280647002317123,
+        "theory_variance": 0.4766952396662946,
+        "ci_lower": 0.47738929935915947,
+        "ci_upper": 0.48831680598104077
+      },
+      {
+        "method": "Exact",
+        "dt": 0.125,
+        "sample_mean": 1.3452505999748208,
+        "theory_mean": 1.3479748434369552,
+        "sample_variance": 0.4624533057498604,
+        "theory_variance": 0.4554524051581793,
+        "ci_lower": 0.4572645010487486,
+        "ci_upper": 0.46773134827357965
+      },
+      {
+        "method": "Euler",
+        "dt": 0.0625,
+        "sample_mean": 1.359939240992448,
+        "theory_mean": 1.3572708461914849,
+        "sample_variance": 0.46568708582662083,
+        "theory_variance": 0.465843137926484,
+        "ci_lower": 0.4604619975633504,
+        "ci_upper": 0.4710020359225107
+      },
+      {
+        "method": "Exact",
+        "dt": 0.0625,
+        "sample_mean": 1.3468721345439383,
+        "theory_mean": 1.3479748434369552,
+        "sample_variance": 0.4579153567532411,
+        "theory_variance": 0.4554524051581793,
+        "ci_lower": 0.4527774686112593,
+        "ci_upper": 0.4631416070473951
+      },
+      {
+        "method": "Euler",
+        "dt": 0.03125,
+        "sample_mean": 1.3521516676575633,
+        "theory_mean": 1.35262697782768,
+        "sample_variance": 0.4612936363415883,
+        "theory_variance": 0.460592006568404,
+        "ci_lower": 0.4561178433283649,
+        "ci_upper": 0.4665584434005067
+      },
+      {
+        "method": "Exact",
+        "dt": 0.03125,
+        "sample_mean": 1.3478058845068897,
+        "theory_mean": 1.3479748434369552,
+        "sample_variance": 0.4515920490659719,
+        "theory_variance": 0.4554524051581793,
+        "ci_lower": 0.4465251095111152,
+        "ci_upper": 0.4567461305888164
+      }
+    ],
+    "own_method_intervals_covered": 10
+  },
+  "markov": {
+    "steps": 160,
+    "paths_per_combination": 50000,
+    "batches": 5,
+    "seeds": [
+      62000,
+      62001,
+      62002,
+      62003,
+      62004,
+      62010,
+      62011,
+      62012,
+      62013,
+      62014,
+      62100,
+      62101,
+      62102,
+      62103,
+      62104,
+      62110,
+      62111,
+      62112,
+      62113,
+      62114,
+      62200,
+      62201,
+      62202,
+      62203,
+      62204,
+      62210,
+      62211,
+      62212,
+      62213,
+      62214
+    ],
+    "rows": [
+      {
+        "alpha": 0.2,
+        "initial_state": 0,
+        "max_probability_error": 0.007240000000000024,
+        "endpoint_probability": 0.4996,
+        "theoretical_endpoint_probability": 0.5
+      },
+      {
+        "alpha": 0.2,
+        "initial_state": 1,
+        "max_probability_error": 0.005840000000000012,
+        "endpoint_probability": 0.5002,
+        "theoretical_endpoint_probability": 0.5
+      },
+      {
+        "alpha": 0.02,
+        "initial_state": 0,
+        "max_probability_error": 0.004820683518288238,
+        "endpoint_probability": 0.49866,
+        "theoretical_endpoint_probability": 0.5007283955613697
+      },
+      {
+        "alpha": 0.02,
+        "initial_state": 1,
+        "max_probability_error": 0.004500607923297373,
+        "endpoint_probability": 0.50194,
+        "theoretical_endpoint_probability": 0.4992716044386302
+      },
+      {
+        "alpha": 1.0,
+        "initial_state": 0,
+        "max_probability_error": 0.0,
+        "endpoint_probability": 1.0,
+        "theoretical_endpoint_probability": 1.0
+      },
+      {
+        "alpha": 1.0,
+        "initial_state": 1,
+        "max_probability_error": 0.0,
+        "endpoint_probability": 0.0,
+        "theoretical_endpoint_probability": 0.0
+      }
+    ]
+  },
+  "monte_carlo": {
+    "pilot_seed": 63000,
+    "evaluation_seed": 63001,
+    "pilot_size": 5000,
+    "replications": 1000,
+    "coefficient": -0.6664344973229326,
+    "target": 0.7468241328124269,
+    "predicted_variance_ratio": 66.01431381303543,
+    "quadrature_error_estimates": [
+      4.485048034105261e-16,
+      6.79405385748269e-18
+    ],
+    "slopes": {
+      "plain": -0.5074198346766693,
+      "control": -0.5037735981207399
+    },
+    "rows": [
+      {
+        "n": 100,
+        "plain": {
+          "rmse": 0.020056036594385,
+          "theoretical_rmse": 0.020099184388992122,
+          "bias": 0.00018418627063288007,
+          "average_se": 0.02011334220370209,
+          "coverage": 0.947,
+          "coverage_lower": 0.9313253831625082,
+          "coverage_upper": 0.9592534947514054
+        },
+        "control": {
+          "rmse": 0.002507487233697569,
+          "theoretical_rmse": 0.002473770337799939,
+          "bias": 0.00012571824656149033,
+          "average_se": 0.0024715714815962356,
+          "coverage": 0.943,
+          "coverage_lower": 0.9268629323405141,
+          "coverage_upper": 0.9557465596412841
+        },
+        "squared_rmse_ratio": 63.975363999334554
+      },
+      {
+        "n": 300,
+        "plain": {
+          "rmse": 0.011804049540244973,
+          "theoretical_rmse": 0.011604269517476526,
+          "bias": -0.0003165767880098924,
+          "average_se": 0.011599092327312904,
+          "coverage": 0.95,
+          "coverage_lower": 0.9346861797557492,
+          "coverage_upper": 0.9618697376072513
+        },
+        "control": {
+          "rmse": 0.0014525474204396512,
+          "theoretical_rmse": 0.0014282319704421063,
+          "bias": -1.6974105739864243e-05,
+          "average_se": 0.0014272647932966355,
+          "coverage": 0.939,
+          "coverage_lower": 0.9224198811757163,
+          "coverage_upper": 0.9522202248739662
+        },
+        "squared_rmse_ratio": 66.03913987096581
+      },
+      {
+        "n": 1000,
+        "plain": {
+          "rmse": 0.006360963559107082,
+          "theoretical_rmse": 0.006355920178091483,
+          "bias": -2.6919026859473227e-05,
+          "average_se": 0.006356467592733148,
+          "coverage": 0.949,
+          "coverage_lower": 0.9335645136552383,
+          "coverage_upper": 0.9609990572247332
+        },
+        "control": {
+          "rmse": 0.0007760679988477164,
+          "theoretical_rmse": 0.0007822748675611933,
+          "bias": 1.5492949146045376e-05,
+          "average_se": 0.0007824860973784845,
+          "coverage": 0.946,
+          "coverage_lower": 0.9302078451539475,
+          "coverage_upper": 0.9583786862769372
+        },
+        "squared_rmse_ratio": 67.18096901744742
+      },
+      {
+        "n": 3000,
+        "plain": {
+          "rmse": 0.0037255205620793674,
+          "theoretical_rmse": 0.0036695922257688916,
+          "bias": 0.00015027705515302525,
+          "average_se": 0.003669500022488621,
+          "coverage": 0.948,
+          "coverage_lower": 0.93244426068072,
+          "coverage_upper": 0.9601269637162226
+        },
+        "control": {
+          "rmse": 0.00046526791073280054,
+          "theoretical_rmse": 0.0004516466053667338,
+          "bias": 1.1820386782601666e-05,
+          "average_se": 0.0004515852517026044,
+          "coverage": 0.942,
+          "coverage_lower": 0.9257504237337675,
+          "coverage_upper": 0.9548667217650018
+        },
+        "squared_rmse_ratio": 64.11619312899249
+      },
+      {
+        "n": 10000,
+        "plain": {
+          "rmse": 0.0019252242808904738,
+          "theoretical_rmse": 0.0020099184388992124,
+          "bias": -9.106970064964859e-05,
+          "average_se": 0.0020104839644075403,
+          "coverage": 0.958,
+          "coverage_lower": 0.9437155747733968,
+          "coverage_upper": 0.9687791144538346
+        },
+        "control": {
+          "rmse": 0.00024396460395691445,
+          "theoretical_rmse": 0.0002473770337799939,
+          "bias": 9.116452628910032e-06,
+          "average_se": 0.0002473557761428687,
+          "coverage": 0.947,
+          "coverage_lower": 0.9313253831625082,
+          "coverage_upper": 0.9592534947514054
+        },
+        "squared_rmse_ratio": 62.274323684063205
+      }
+    ]
+  }
+}

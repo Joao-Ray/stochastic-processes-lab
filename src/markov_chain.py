@@ -47,6 +47,18 @@ def stationary_distribution(matrix: np.ndarray) -> np.ndarray:
     return distribution / distribution.sum()
 
 
+def total_variation_distance(first: np.ndarray, second: np.ndarray) -> float:
+    """Return half the L1 distance between two finite distributions."""
+    left, right = np.asarray(first, dtype=float), np.asarray(second, dtype=float)
+    if left.ndim != 1 or right.shape != left.shape or left.size == 0:
+        raise ValueError("distributions must be nonempty vectors of equal size")
+    for values in (left, right):
+        if (np.any(~np.isfinite(values)) or np.any(values < 0)
+                or not np.isclose(values.sum(), 1.0, atol=1e-12, rtol=0)):
+            raise ValueError("distributions must be finite, nonnegative and sum to one")
+    return float(0.5 * np.sum(np.abs(left - right)))
+
+
 def simulate_chains(
     matrix: np.ndarray,
     initial_state: int,

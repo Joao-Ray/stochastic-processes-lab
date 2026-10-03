@@ -85,3 +85,45 @@ def root_mean_squared_error(estimates: np.ndarray, truth: float) -> float:
     if not np.isfinite(truth):
         raise ValueError("truth must be finite")
     return float(np.sqrt(np.mean((values - truth) ** 2)))
+
+
+def replicate_control_variate_integrals(
+    function: Callable[[np.ndarray], np.ndarray],
+    control: Callable[[np.ndarray], np.ndarray],
+    control_mean: float,
+    coefficient: float,
+    n_samples: int,
+    n_replications: int,
+    rng: np.random.Generator,
+    batch_size: int = 64,
+) -> tuple[np.ndarray, np.ndarray, np.ndarray, np.ndarray]:
+    """Estimate an integral on [0, 1] with plain and control-variate MC.
+
+    Returns plain estimates, adjusted estimates, plain SEs, adjusted SEs.
+    Each pair uses the same uniform points; different rows are independent.
+    ``control_mean`` is the known mean of control(U) for U uniform on [0, 1].
+    ``coefficient`` must be fixed independently of these evaluation samples
+    for the adjusted estimator to be unbiased conditional on that coefficient.
+    """
+    samples = _validate_positive_integer(n_samples, "n_samples")
+    replications = _validate_positive_integer(n_replications, "n_replications")
+    batch = _validate_positive_integer(batch_size, "batch_size")
+    if samples < 2:
+        raise ValueError("n_samples must be at least two to estimate standard error")
+    if not np.isfinite(control_mean) or not np.isfinite(coefficient):
+        raise ValueError("control_mean and coefficient must be finite")
+    results = np.empty((4, replications), dtype=float)
+    for start in range(0, replications, batch):
+        stop = min(start + batch, replications)
+        points = rng.random((stop - start, samples))
+        values = np.asarray(function(points), dtype=float)
+        controls = np.asarray(control(points), dtype=float)
+        if (values.shape != points.shape or controls.shape != points.shape
+                or np.any(~np.isfinite(values)) or np.any(~np.isfinite(controls))):
+            raise ValueError("function and control must return one finite value per point")
+        adjusted = values - coefficient * (controls - control_mean)
+        results[0, start:stop] = values.mean(axis=1)
+        results[1, start:stop] = adjusted.mean(axis=1)
+        results[2, start:stop] = values.std(axis=1, ddof=1) / np.sqrt(samples)
+        results[3, start:stop] = adjusted.std(axis=1, ddof=1) / np.sqrt(samples)
+    return tuple(results)

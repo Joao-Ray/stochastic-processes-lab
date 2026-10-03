@@ -89,6 +89,64 @@ def simulate_ou_euler(
     return paths
 
 
+def simulate_ou_exact(
+    theta: float,
+    mu: float,
+    sigma: float,
+    x0: float,
+    dt: float,
+    n_steps: int,
+    n_paths: int,
+    rng: np.random.Generator,
+) -> np.ndarray:
+    """Sample the exact OU transition law at equally spaced grid points.
+
+    This is exact in distribution on the grid, up to floating-point and
+    pseudorandom sampling error. It does not interpolate a continuous path.
+    Unlike Euler, it has no step-size stability restriction.
+    """
+    _validate_parameters(theta, sigma)
+    if not np.isfinite(mu + x0) or not np.isfinite(dt) or dt <= 0:
+        raise ValueError("mu and x0 must be finite and dt must be positive")
+    if not isinstance(n_steps, (int, np.integer)) or n_steps < 1:
+        raise ValueError("n_steps must be a positive integer")
+    if not isinstance(n_paths, (int, np.integer)) or n_paths < 1:
+        raise ValueError("n_paths must be a positive integer")
+    decay = np.exp(-theta * dt)
+    noise_scale = sigma * np.sqrt(-np.expm1(-2 * theta * dt) / (2 * theta))
+    paths = np.empty((int(n_paths), int(n_steps) + 1), dtype=float)
+    paths[:, 0] = x0
+    for step in range(int(n_steps)):
+        paths[:, step + 1] = (
+            mu + decay * (paths[:, step] - mu)
+            + noise_scale * rng.standard_normal(int(n_paths))
+        )
+    return paths
+
+
+def ou_euler_moments(
+    theta: float, mu: float, sigma: float, x0: float, dt: float, n_steps: int
+) -> tuple[float, float]:
+    """Return the finite-step Euler mean and variance for deterministic X_0.
+
+    These are moments of the discretized recursion, not the continuous SDE.
+    The recurrence avoids cancellation in the geometric-series formula.
+    """
+    _validate_parameters(theta, sigma)
+    if not np.isfinite(mu + x0) or not np.isfinite(dt) or dt <= 0:
+        raise ValueError("mu and x0 must be finite and dt must be positive")
+    if theta * dt >= 2:
+        raise ValueError("Euler step is unstable: require theta * dt < 2")
+    if not isinstance(n_steps, (int, np.integer)) or n_steps < 0:
+        raise ValueError("n_steps must be a nonnegative integer")
+    decay = 1 - theta * dt
+    mean, variance = float(x0), 0.0
+    for _ in range(int(n_steps)):
+        mean = mu + decay * (mean - mu)
+        variance = decay**2 * variance + sigma**2 * dt
+    return float(mean), float(variance)
+
+
 def sample_autocorrelation(series: np.ndarray, max_lag: int) -> np.ndarray:
     """Estimate autocorrelation at integer lags from one series."""
     values = np.asarray(series, dtype=float)
