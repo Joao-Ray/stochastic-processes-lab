@@ -83,6 +83,36 @@ $$
 
 The one-dimensional symmetric walk reaches $a$ eventually with probability one, but $E[T_a]=\infty$. These facts can coexist because the hitting-time distribution has a heavy tail. A finite simulation horizon therefore creates right-censored paths: an unfinished path has an unknown later hitting time, rather than no hitting time.
 
+Here is a finite-interval argument for both claims. For any positive integer $b$, let
+
+$$
+\tau_b=\inf\{n\geq0:S_n\in\{a,-b\}\}.
+$$
+
+The martingale $S_n$ and absorption at either boundary give the gambler's-ruin probabilities
+
+$$
+P(S_{\tau_b}=a)=\frac{b}{a+b},
+\qquad
+P(S_{\tau_b}=-b)=\frac{a}{a+b}.
+$$
+
+Because hitting $a$ before $-b$ guarantees eventual hitting of $a$,
+
+$$
+P(T_a<\infty)\geq\frac{b}{a+b}.
+$$
+
+Letting $b\to\infty$ proves $P(T_a<\infty)=1$. The martingale $S_n^2-n$ gives
+
+$$
+E[\tau_b]=E[S_{\tau_b}^2]
+=a^2\frac{b}{a+b}+b^2\frac{a}{a+b}
+=ab.
+$$
+
+Since $\tau_b\leq T_a$, we have $E[T_a]\geq ab$ for every $b$. The bound grows without limit, so $E[T_a]=\infty$. The use of optional stopping here is justified for the walk absorbed between two finite boundaries; it does not assume a finite mean for $T_a$.
+
 ### Code connection
 
 - `simulate_random_walk` constructs cumulative sums of independent $\pm1$ increments.
