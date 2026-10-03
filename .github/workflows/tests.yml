@@ -33,4 +33,3 @@ jobs:
 
       - name: Run unit tests
         run: python -m pytest -q
-

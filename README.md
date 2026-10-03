@@ -65,11 +65,19 @@ See also [$\pi$ convergence](figures/monte_carlo_pi_convergence.png) and [the CL
 
 ## Reproduce the experiments
 
-Use Python 3.11 or newer. Create a virtual environment and install the dependencies:
+Use Python 3.11 or newer. On macOS or Linux, create a virtual environment and install the dependencies:
 
 ```bash
 python -m venv .venv
-source .venv/bin/activate  # Windows: .venv\Scripts\activate
+source .venv/bin/activate
+python -m pip install -r requirements.txt
+```
+
+On Windows PowerShell, use:
+
+```powershell
+py -m venv .venv
+.\.venv\Scripts\Activate.ps1
 python -m pip install -r requirements.txt
 ```
 
