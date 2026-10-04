@@ -1,0 +1,848 @@
+{
+  "config": {
+    "truth": {
+      "theta": 0.7,
+      "mu": 1.5,
+      "sigma": 0.8
+    },
+    "replications": 500,
+    "seed": 20261004,
+    "training_durations": [
+      10,
+      30,
+      100,
+      300
+    ],
+    "base_dt": 0.1,
+    "sampling_steps": [
+      0.1,
+      0.5,
+      1.0
+    ],
+    "sampling_duration": 30,
+    "forecast_horizons": [
+      1,
+      3,
+      5
+    ],
+    "prediction_level": 0.95,
+    "mean_shift": 1.5
+  },
+  "versions": {
+    "python": "3.14.7",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2"
+  },
+  "streams": [
+    {
+      "duration": 10,
+      "entropy": 20261004,
+      "spawn_key": [
+        0
+      ]
+    },
+    {
+      "duration": 30,
+      "entropy": 20261004,
+      "spawn_key": [
+        1
+      ]
+    },
+    {
+      "duration": 100,
+      "entropy": 20261004,
+      "spawn_key": [
+        2
+      ]
+    },
+    {
+      "duration": 300,
+      "entropy": 20261004,
+      "spawn_key": [
+        3
+      ]
+    }
+  ],
+  "data_source": "Synthetic exact OU transitions; deterministic initial value equals true mu",
+  "coverage_population": "Successful interior OU fits only; oracle uses the same retained paths",
+  "shifted_future_design": "Same future Gaussian innovations; mean shift begins at forecast origin",
+  "scenarios": [
+    {
+      "name": "T=10, dt=0.1",
+      "duration": 10,
+      "dt": 0.1,
+      "n_transitions": 100,
+      "attempted": 500,
+      "successful": 500,
+      "failures": 0,
+      "failure_reasons": {},
+      "parameters": {
+        "theta": {
+          "mean": 1.2292521946464199,
+          "bias": 0.5292521946464199,
+          "rmse": 0.8464144606104764,
+          "percentile_025": 0.3872470451745098,
+          "percentile_975": 2.7029838938368087
+        },
+        "mu": {
+          "mean": 1.5077374303617748,
+          "bias": 0.007737430361774766,
+          "rmse": 0.3606926202783782,
+          "percentile_025": 0.8163145486349238,
+          "percentile_975": 2.174098186942085
+        },
+        "sigma": {
+          "mean": 0.811833176193131,
+          "bias": 0.011833176193130956,
+          "rmse": 0.05856333736082516,
+          "percentile_025": 0.702647548718235,
+          "percentile_975": 0.9245216690960193
+        },
+        "half_life": {
+          "mean": 0.7387769800924098,
+          "bias": -0.2514332778503693,
+          "rmse": 0.52020303644533,
+          "percentile_025": 0.2564517560270669,
+          "percentile_975": 1.7899743264471772
+        }
+      },
+      "forecasts": [
+        {
+          "horizon": 1.0,
+          "plugin": {
+            "n": 500,
+            "coverage": 0.914,
+            "lower": 0.8861601885014425,
+            "upper": 0.9355268575963924
+          },
+          "oracle": {
+            "n": 500,
+            "coverage": 0.964,
+            "lower": 0.9438156730319722,
+            "upper": 0.9771089390197072
+          },
+          "shift_plugin": {
+            "n": 500,
+            "coverage": 0.674,
+            "lower": 0.6317220455546273,
+            "upper": 0.7136246839647526
+          },
+          "shift_oracle": {
+            "n": 500,
+            "coverage": 0.964,
+            "lower": 0.9438156730319722,
+            "upper": 0.9771089390197072
+          },
+          "plugin_rmse": 0.5980083914077119,
+          "persistence_rmse": 0.6385993914476777
+        },
+        {
+          "horizon": 3.0,
+          "plugin": {
+            "n": 500,
+            "coverage": 0.828,
+            "lower": 0.7924525525008731,
+            "upper": 0.8585458801563487
+          },
+          "oracle": {
+            "n": 500,
+            "coverage": 0.946,
+            "lower": 0.9225734384893529,
+            "upper": 0.9626256498189425
+          },
+          "shift_plugin": {
+            "n": 500,
+            "coverage": 0.41,
+            "lower": 0.3677350694076764,
+            "upper": 0.453637311875403
+          },
+          "shift_oracle": {
+            "n": 500,
+            "coverage": 0.946,
+            "lower": 0.9225734384893529,
+            "upper": 0.9626256498189425
+          },
+          "plugin_rmse": 0.7525841521414591,
+          "persistence_rmse": 0.9009475223957257
+        },
+        {
+          "horizon": 5.0,
+          "plugin": {
+            "n": 500,
+            "coverage": 0.854,
+            "lower": 0.8203507337796904,
+            "upper": 0.8822512331735307
+          },
+          "oracle": {
+            "n": 500,
+            "coverage": 0.946,
+            "lower": 0.9225734384893529,
+            "upper": 0.9626256498189425
+          },
+          "shift_plugin": {
+            "n": 500,
+            "coverage": 0.336,
+            "lower": 0.29598800782704915,
+            "upper": 0.37851277584434007
+          },
+          "shift_oracle": {
+            "n": 500,
+            "coverage": 0.946,
+            "lower": 0.9225734384893529,
+            "upper": 0.9626256498189425
+          },
+          "plugin_rmse": 0.7623353911503534,
+          "persistence_rmse": 0.9418032149111312
+        }
+      ]
+    },
+    {
+      "name": "T=30, dt=0.1",
+      "duration": 30,
+      "dt": 0.1,
+      "n_transitions": 300,
+      "attempted": 500,
+      "successful": 500,
+      "failures": 0,
+      "failure_reasons": {},
+      "parameters": {
+        "theta": {
+          "mean": 0.8495471542442519,
+          "bias": 0.1495471542442519,
+          "rmse": 0.3136633905282943,
+          "percentile_025": 0.4309234515131303,
+          "percentile_975": 1.4296861375364196
+        },
+        "mu": {
+          "mean": 1.4996949115271971,
+          "bias": -0.00030508847280286133,
+          "rmse": 0.21463325844048595,
+          "percentile_025": 1.111065962870082,
+          "percentile_975": 1.937815137743256
+        },
+        "sigma": {
+          "mean": 0.804085587324647,
+          "bias": 0.004085587324646922,
+          "rmse": 0.034522827730000046,
+          "percentile_025": 0.7341156813955368,
+          "percentile_975": 0.8694811114623321
+        },
+        "half_life": {
+          "mean": 0.9037736817758425,
+          "bias": -0.08643657616693656,
+          "rmse": 0.3114462445658524,
+          "percentile_025": 0.48482554009248524,
+          "percentile_975": 1.6085171769577367
+        }
+      },
+      "forecasts": [
+        {
+          "horizon": 1.0,
+          "plugin": {
+            "n": 500,
+            "coverage": 0.956,
+            "lower": 0.9342805571276716,
+            "upper": 0.9707660443713928
+          },
+          "oracle": {
+            "n": 500,
+            "coverage": 0.968,
+            "lower": 0.9486551309545582,
+            "upper": 0.9802084863734289
+          },
+          "shift_plugin": {
+            "n": 500,
+            "coverage": 0.716,
+            "lower": 0.674944056876268,
+            "upper": 0.7537622280443413
+          },
+          "shift_oracle": {
+            "n": 500,
+            "coverage": 0.968,
+            "lower": 0.9486551309545582,
+            "upper": 0.9802084863734289
+          },
+          "plugin_rmse": 0.5770637497553548,
+          "persistence_rmse": 0.6630458955472041
+        },
+        {
+          "horizon": 3.0,
+          "plugin": {
+            "n": 500,
+            "coverage": 0.91,
+            "lower": 0.8816905887106666,
+            "upper": 0.9320574521108606
+          },
+          "oracle": {
+            "n": 500,
+            "coverage": 0.94,
+            "lower": 0.9156389368747802,
+            "upper": 0.9576516435190539
+          },
+          "shift_plugin": {
+            "n": 500,
+            "coverage": 0.442,
+            "lower": 0.3990759531428234,
+            "upper": 0.4858084703507167
+          },
+          "shift_oracle": {
+            "n": 500,
+            "coverage": 0.94,
+            "lower": 0.9156389368747802,
+            "upper": 0.9576516435190539
+          },
+          "plugin_rmse": 0.7038363661797367,
+          "persistence_rmse": 0.9024561637665381
+        },
+        {
+          "horizon": 5.0,
+          "plugin": {
+            "n": 500,
+            "coverage": 0.928,
+            "lower": 0.9019315959830375,
+            "upper": 0.9475419685818739
+          },
+          "oracle": {
+            "n": 500,
+            "coverage": 0.958,
+            "lower": 0.9366484142456699,
+            "upper": 0.9723676898915483
+          },
+          "shift_plugin": {
+            "n": 500,
+            "coverage": 0.376,
+            "lower": 0.3346400158192325,
+            "upper": 0.4192508206152326
+          },
+          "shift_oracle": {
+            "n": 500,
+            "coverage": 0.958,
+            "lower": 0.9366484142456699,
+            "upper": 0.9723676898915483
+          },
+          "plugin_rmse": 0.683929592560393,
+          "persistence_rmse": 0.9129129326721745
+        }
+      ]
+    },
+    {
+      "name": "T=30, dt=0.5",
+      "duration": 30,
+      "dt": 0.5,
+      "n_transitions": 60,
+      "attempted": 500,
+      "successful": 500,
+      "failures": 0,
+      "failure_reasons": {},
+      "parameters": {
+        "theta": {
+          "mean": 0.8734353358119972,
+          "bias": 0.17343533581199722,
+          "rmse": 0.3928035367771749,
+          "percentile_025": 0.38084147263994134,
+          "percentile_975": 1.8894112720946368
+        },
+        "mu": {
+          "mean": 1.4999054128776552,
+          "bias": -9.458712234478028e-05,
+          "rmse": 0.21411949297051203,
+          "percentile_025": 1.099177416285558,
+          "percentile_975": 1.9291315712000123
+        },
+        "sigma": {
+          "mean": 0.8101661885967082,
+          "bias": 0.010166188596708148,
+          "rmse": 0.09062528309715868,
+          "percentile_025": 0.6465867188039218,
+          "percentile_975": 0.9884451732246277
+        },
+        "half_life": {
+          "mean": 0.9204128282110134,
+          "bias": -0.06979742973176561,
+          "rmse": 0.3697938939199842,
+          "percentile_025": 0.3668738577462795,
+          "percentile_975": 1.820043199904932
+        }
+      },
+      "forecasts": [
+        {
+          "horizon": 1.0,
+          "plugin": {
+            "n": 500,
+            "coverage": 0.958,
+            "lower": 0.9366484142456699,
+            "upper": 0.9723676898915483
+          },
+          "oracle": {
+            "n": 500,
+            "coverage": 0.968,
+            "lower": 0.9486551309545582,
+            "upper": 0.9802084863734289
+          },
+          "shift_plugin": {
+            "n": 500,
+            "coverage": 0.72,
+            "lower": 0.6790813332381924,
+            "upper": 0.7575639569587245
+          },
+          "shift_oracle": {
+            "n": 500,
+            "coverage": 0.968,
+            "lower": 0.9486551309545582,
+            "upper": 0.9802084863734289
+          },
+          "plugin_rmse": 0.58035982673169,
+          "persistence_rmse": 0.6630458955472041
+        },
+        {
+          "horizon": 3.0,
+          "plugin": {
+            "n": 500,
+            "coverage": 0.906,
+            "lower": 0.8772354441374409,
+            "upper": 0.9285735914077787
+          },
+          "oracle": {
+            "n": 500,
+            "coverage": 0.94,
+            "lower": 0.9156389368747802,
+            "upper": 0.9576516435190539
+          },
+          "shift_plugin": {
+            "n": 500,
+            "coverage": 0.444,
+            "lower": 0.4010408191814197,
+            "upper": 0.4878131069502743
+          },
+          "shift_oracle": {
+            "n": 500,
+            "coverage": 0.94,
+            "lower": 0.9156389368747802,
+            "upper": 0.9576516435190539
+          },
+          "plugin_rmse": 0.7044074370825336,
+          "persistence_rmse": 0.9024561637665381
+        },
+        {
+          "horizon": 5.0,
+          "plugin": {
+            "n": 500,
+            "coverage": 0.92,
+            "lower": 0.8928936834221488,
+            "upper": 0.9407018705901475
+          },
+          "oracle": {
+            "n": 500,
+            "coverage": 0.958,
+            "lower": 0.9366484142456699,
+            "upper": 0.9723676898915483
+          },
+          "shift_plugin": {
+            "n": 500,
+            "coverage": 0.376,
+            "lower": 0.3346400158192325,
+            "upper": 0.4192508206152326
+          },
+          "shift_oracle": {
+            "n": 500,
+            "coverage": 0.958,
+            "lower": 0.9366484142456699,
+            "upper": 0.9723676898915483
+          },
+          "plugin_rmse": 0.6860278911043673,
+          "persistence_rmse": 0.9129129326721745
+        }
+      ]
+    },
+    {
+      "name": "T=30, dt=1",
+      "duration": 30,
+      "dt": 1.0,
+      "n_transitions": 30,
+      "attempted": 500,
+      "successful": 492,
+      "failures": 8,
+      "failure_reasons": {
+        "unconstrained AR(1)": 8
+      },
+      "parameters": {
+        "theta": {
+          "mean": 0.984896598656306,
+          "bias": 0.284896598656306,
+          "rmse": 0.6853660735193935,
+          "percentile_025": 0.3311309178395655,
+          "percentile_975": 2.5561162254334895
+        },
+        "mu": {
+          "mean": 1.5019956050033272,
+          "bias": 0.0019956050033271833,
+          "rmse": 0.21604306354489008,
+          "percentile_025": 1.1055615048747918,
+          "percentile_975": 1.9267041423745295
+        },
+        "sigma": {
+          "mean": 0.8483172899322251,
+          "bias": 0.04831728993222506,
+          "rmse": 0.19023792022685795,
+          "percentile_025": 0.5970724357047901,
+          "percentile_975": 1.273425953097932
+        },
+        "half_life": {
+          "mean": 0.9051235932659868,
+          "bias": -0.08508666467679227,
+          "rmse": 0.4500905616442517,
+          "percentile_025": 0.27117521596064703,
+          "percentile_975": 2.093498126967826
+        }
+      },
+      "forecasts": [
+        {
+          "horizon": 1.0,
+          "plugin": {
+            "n": 492,
+            "coverage": 0.959349593495935,
+            "lower": 0.9380483714093862,
+            "upper": 0.9735333286667504
+          },
+          "oracle": {
+            "n": 492,
+            "coverage": 0.9695121951219512,
+            "lower": 0.9503109845663958,
+            "upper": 0.9814384522370888
+          },
+          "shift_plugin": {
+            "n": 492,
+            "coverage": 0.709349593495935,
+            "lower": 0.667728642866691,
+            "upper": 0.747726733716681
+          },
+          "shift_oracle": {
+            "n": 492,
+            "coverage": 0.9695121951219512,
+            "lower": 0.9503109845663958,
+            "upper": 0.9814384522370888
+          },
+          "plugin_rmse": 0.5710783607534545,
+          "persistence_rmse": 0.6622024096764441
+        },
+        {
+          "horizon": 3.0,
+          "plugin": {
+            "n": 492,
+            "coverage": 0.9105691056910569,
+            "lower": 0.8820701478519147,
+            "upper": 0.9327064159329507
+          },
+          "oracle": {
+            "n": 492,
+            "coverage": 0.9390243902439024,
+            "lower": 0.9142885543334904,
+            "upper": 0.9569576722879498
+          },
+          "shift_plugin": {
+            "n": 492,
+            "coverage": 0.4491869918699187,
+            "lower": 0.40579721545169817,
+            "upper": 0.49336410091156097
+          },
+          "shift_oracle": {
+            "n": 492,
+            "coverage": 0.9390243902439024,
+            "lower": 0.9142885543334904,
+            "upper": 0.9569576722879498
+          },
+          "plugin_rmse": 0.7105414454799563,
+          "persistence_rmse": 0.9035328277413205
+        },
+        {
+          "horizon": 5.0,
+          "plugin": {
+            "n": 492,
+            "coverage": 0.9166666666666666,
+            "lower": 0.8888981855503231,
+            "upper": 0.9379790202709513
+          },
+          "oracle": {
+            "n": 492,
+            "coverage": 0.959349593495935,
+            "lower": 0.9380483714093862,
+            "upper": 0.9735333286667504
+          },
+          "shift_plugin": {
+            "n": 492,
+            "coverage": 0.3800813008130081,
+            "lower": 0.33827523162397,
+            "upper": 0.4237454749933217
+          },
+          "shift_oracle": {
+            "n": 492,
+            "coverage": 0.959349593495935,
+            "lower": 0.9380483714093862,
+            "upper": 0.9735333286667504
+          },
+          "plugin_rmse": 0.6841019353720474,
+          "persistence_rmse": 0.9104751701960722
+        }
+      ]
+    },
+    {
+      "name": "T=100, dt=0.1",
+      "duration": 100,
+      "dt": 0.1,
+      "n_transitions": 1000,
+      "attempted": 500,
+      "successful": 500,
+      "failures": 0,
+      "failure_reasons": {},
+      "parameters": {
+        "theta": {
+          "mean": 0.7404402380811791,
+          "bias": 0.040440238081179136,
+          "rmse": 0.12573872608578707,
+          "percentile_025": 0.528672815762685,
+          "percentile_975": 0.9771920983621097
+        },
+        "mu": {
+          "mean": 1.495890437608128,
+          "bias": -0.004109562391872101,
+          "rmse": 0.10862077362375791,
+          "percentile_025": 1.2793029097646715,
+          "percentile_975": 1.7060009170094887
+        },
+        "sigma": {
+          "mean": 0.8015360351743718,
+          "bias": 0.0015360351743717304,
+          "rmse": 0.018886105195097487,
+          "percentile_025": 0.7638049988361534,
+          "percentile_975": 0.8374210406863479
+        },
+        "half_life": {
+          "mean": 0.9611048930475288,
+          "bias": -0.029105364895250285,
+          "rmse": 0.1620741806589411,
+          "percentile_025": 0.7093384190663857,
+          "percentile_975": 1.311108049314907
+        }
+      },
+      "forecasts": [
+        {
+          "horizon": 1.0,
+          "plugin": {
+            "n": 500,
+            "coverage": 0.956,
+            "lower": 0.9342805571276716,
+            "upper": 0.9707660443713928
+          },
+          "oracle": {
+            "n": 500,
+            "coverage": 0.954,
+            "lower": 0.9319222072317267,
+            "upper": 0.9691548916291838
+          },
+          "shift_plugin": {
+            "n": 500,
+            "coverage": 0.744,
+            "lower": 0.7039870300464813,
+            "upper": 0.7802922918082812
+          },
+          "shift_oracle": {
+            "n": 500,
+            "coverage": 0.954,
+            "lower": 0.9319222072317267,
+            "upper": 0.9691548916291838
+          },
+          "plugin_rmse": 0.5553005421017569,
+          "persistence_rmse": 0.652735472795168
+        },
+        {
+          "horizon": 3.0,
+          "plugin": {
+            "n": 500,
+            "coverage": 0.974,
+            "lower": 0.9560285091657758,
+            "upper": 0.9847436160766728
+          },
+          "oracle": {
+            "n": 500,
+            "coverage": 0.98,
+            "lower": 0.9635798167531208,
+            "upper": 0.9891008164037892
+          },
+          "shift_plugin": {
+            "n": 500,
+            "coverage": 0.448,
+            "lower": 0.4049726694186174,
+            "upper": 0.4918202619893841
+          },
+          "shift_oracle": {
+            "n": 500,
+            "coverage": 0.98,
+            "lower": 0.9635798167531208,
+            "upper": 0.9891008164037892
+          },
+          "plugin_rmse": 0.636648994010289,
+          "persistence_rmse": 0.8600679629863778
+        },
+        {
+          "horizon": 5.0,
+          "plugin": {
+            "n": 500,
+            "coverage": 0.944,
+            "lower": 0.920255206353293,
+            "upper": 0.9609743793168485
+          },
+          "oracle": {
+            "n": 500,
+            "coverage": 0.948,
+            "lower": 0.9248988560621544,
+            "upper": 0.9642697348842947
+          },
+          "shift_plugin": {
+            "n": 500,
+            "coverage": 0.394,
+            "lower": 0.3521341694850665,
+            "upper": 0.4374821906927827
+          },
+          "shift_oracle": {
+            "n": 500,
+            "coverage": 0.948,
+            "lower": 0.9248988560621544,
+            "upper": 0.9642697348842947
+          },
+          "plugin_rmse": 0.6787410992704053,
+          "persistence_rmse": 0.9191329352689969
+        }
+      ]
+    },
+    {
+      "name": "T=300, dt=0.1",
+      "duration": 300,
+      "dt": 0.1,
+      "n_transitions": 3000,
+      "attempted": 500,
+      "successful": 500,
+      "failures": 0,
+      "failure_reasons": {},
+      "parameters": {
+        "theta": {
+          "mean": 0.7178446645155643,
+          "bias": 0.017844664515564324,
+          "rmse": 0.07659950121748167,
+          "percentile_025": 0.5830289076936911,
+          "percentile_975": 0.8744749815210368
+        },
+        "mu": {
+          "mean": 1.5008333929087054,
+          "bias": 0.0008333929087054326,
+          "rmse": 0.06468842284271124,
+          "percentile_025": 1.376977334965157,
+          "percentile_975": 1.6213091752069226
+        },
+        "sigma": {
+          "mean": 0.8000642115126904,
+          "bias": 6.421151269031533e-05,
+          "rmse": 0.010119142377331749,
+          "percentile_025": 0.7804423535494127,
+          "percentile_975": 0.8196762081334279
+        },
+        "half_life": {
+          "mean": 0.975938153541786,
+          "bias": -0.014272104400993024,
+          "rmse": 0.10169166355336169,
+          "percentile_025": 0.7926902265535272,
+          "percentile_975": 1.1888729347613527
+        }
+      },
+      "forecasts": [
+        {
+          "horizon": 1.0,
+          "plugin": {
+            "n": 500,
+            "coverage": 0.944,
+            "lower": 0.920255206353293,
+            "upper": 0.9609743793168485
+          },
+          "oracle": {
+            "n": 500,
+            "coverage": 0.952,
+            "lower": 0.92957280316411,
+            "upper": 0.9675347930586469
+          },
+          "shift_plugin": {
+            "n": 500,
+            "coverage": 0.722,
+            "lower": 0.6811514003636959,
+            "upper": 0.7594633924713748
+          },
+          "shift_oracle": {
+            "n": 500,
+            "coverage": 0.952,
+            "lower": 0.92957280316411,
+            "upper": 0.9675347930586469
+          },
+          "plugin_rmse": 0.5842831784270638,
+          "persistence_rmse": 0.6734920458154257
+        },
+        {
+          "horizon": 3.0,
+          "plugin": {
+            "n": 500,
+            "coverage": 0.948,
+            "lower": 0.9248988560621544,
+            "upper": 0.9642697348842947
+          },
+          "oracle": {
+            "n": 500,
+            "coverage": 0.958,
+            "lower": 0.9366484142456699,
+            "upper": 0.9723676898915483
+          },
+          "shift_plugin": {
+            "n": 500,
+            "coverage": 0.504,
+            "lower": 0.460312154390353,
+            "upper": 0.5476268508859545
+          },
+          "shift_oracle": {
+            "n": 500,
+            "coverage": 0.958,
+            "lower": 0.9366484142456699,
+            "upper": 0.9723676898915483
+          },
+          "plugin_rmse": 0.6639816509293449,
+          "persistence_rmse": 0.8975350340925204
+        },
+        {
+          "horizon": 5.0,
+          "plugin": {
+            "n": 500,
+            "coverage": 0.938,
+            "lower": 0.9133402868983618,
+            "upper": 0.9559807908573184
+          },
+          "oracle": {
+            "n": 500,
+            "coverage": 0.942,
+            "lower": 0.917943812143745,
+            "upper": 0.9593162708882429
+          },
+          "shift_plugin": {
+            "n": 500,
+            "coverage": 0.43,
+            "lower": 0.38730164759035934,
+            "upper": 0.4737657600742581
+          },
+          "shift_oracle": {
+            "n": 500,
+            "coverage": 0.942,
+            "lower": 0.917943812143745,
+            "upper": 0.9593162708882429
+          },
+          "plugin_rmse": 0.6983468104549366,
+          "persistence_rmse": 0.9136607944915802
+        }
+      ]
+    }
+  ]
+}

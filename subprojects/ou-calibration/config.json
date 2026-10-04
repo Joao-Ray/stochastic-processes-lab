@@ -1,0 +1,12 @@
+{
+  "truth": {"theta": 0.7, "mu": 1.5, "sigma": 0.8},
+  "replications": 500,
+  "seed": 20261004,
+  "training_durations": [10, 30, 100, 300],
+  "base_dt": 0.1,
+  "sampling_steps": [0.1, 0.5, 1.0],
+  "sampling_duration": 30,
+  "forecast_horizons": [1, 3, 5],
+  "prediction_level": 0.95,
+  "mean_shift": 1.5
+}

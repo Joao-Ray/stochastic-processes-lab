@@ -38,3 +38,8 @@ jobs:
         env:
           MPLBACKEND: Agg
         run: python scripts/execute_notebooks.py notebooks/06_supplementary_validation.ipynb
+
+      - name: Reproduce OU calibration subproject
+        env:
+          MPLBACKEND: Agg
+        run: python subprojects/ou-calibration/run.py --output /tmp/ou-calibration-results
