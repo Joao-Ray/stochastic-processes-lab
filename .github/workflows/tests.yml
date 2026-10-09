@@ -43,3 +43,8 @@ jobs:
         env:
           MPLBACKEND: Agg
         run: python subprojects/ou-calibration/run.py --output /tmp/ou-calibration-results
+
+      - name: Verify OU theoretical results
+        env:
+          MPLBACKEND: Agg
+        run: python subprojects/ou-calibration/verify.py --output /tmp/ou-verification

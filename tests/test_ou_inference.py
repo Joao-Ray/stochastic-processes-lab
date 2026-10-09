@@ -2,8 +2,10 @@
 import numpy as np
 import pytest
 from scipy.optimize import minimize
+from scipy.integrate import quad
+from scipy.stats import norm
 
-from src.ou_inference import OUFitError, fit_ou, forecast_ou
+from src.ou_inference import OUFitError, conditional_ou_nll, fit_ou, forecast_ou
 from src.ou_process import simulate_ou_exact
 
 
@@ -64,3 +66,32 @@ def test_invalid_data_rejected(series, dt):
 def test_invalid_forecasts_rejected(horizons, level):
     with pytest.raises(ValueError):
         forecast_ou(.7, 1., .8, 0., np.asarray(horizons), level)
+
+
+@pytest.mark.parametrize('theta, dt', [(.7, .2), (1e-10, .01)])
+def test_conditional_likelihood_matches_normal_density_and_quadrature(theta, dt):
+    series = np.array([-.2, .3, .1, -.1])
+    mu, sigma = 1.5, .8
+    variance = quad(lambda u: sigma**2*np.exp(-2*theta*u), 0, dt)[0]
+    locations = mu + np.exp(-theta*dt)*(series[:-1]-mu)
+    reference = -norm.logpdf(series[1:], loc=locations, scale=np.sqrt(variance)).sum()
+    assert conditional_ou_nll(series, dt, theta, mu, sigma) == pytest.approx(reference, rel=1e-12)
+
+
+def test_conditional_likelihood_at_fit_matches_reported_optimum():
+    series = simulate_ou_exact(.7, 1.5, .8, 1.5, .2, 500, 1,
+                               np.random.default_rng(777))[0]
+    fit = fit_ou(series, .2)
+    assert conditional_ou_nll(series, .2, fit.theta, fit.mu, fit.sigma) == pytest.approx(
+        fit.negative_log_likelihood, abs=1e-10)
+
+
+@pytest.mark.parametrize('series, dt, theta, mu, sigma', [
+    ([1], .1, .7, 1.5, .8), ([1, np.nan], .1, .7, 1.5, .8),
+    ([[1, 2]], .1, .7, 1.5, .8), ([1, 2], 0, .7, 1.5, .8),
+    ([1, 2], .1, -1e9, 1.5, .8), ([1, 2], .1, np.inf, 1.5, .8),
+    ([1, 2], .1, .7, np.nan, .8), ([1, 2], .1, .7, 1.5, 0),
+])
+def test_invalid_conditional_likelihood_rejected(series, dt, theta, mu, sigma):
+    with pytest.raises(ValueError):
+        conditional_ou_nll(series, dt, theta, mu, sigma)

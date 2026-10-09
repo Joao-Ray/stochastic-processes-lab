@@ -88,8 +88,16 @@ The [subproject directory](subprojects/README.md) extends the core experiments i
 
 [Executed report](subprojects/ou-calibration/results/report.md) · [中文阅读指南](subprojects/ou-calibration/GUIDE_ZH.md)
 
+[Theoretical derivations](subprojects/ou-calibration/THEORY.md) and
+[numerical verification](subprojects/ou-calibration/results/verification/report.md)
+connect the SDE solution, Itô variance, conditional MLE, forecast MSE, and
+mean-shift coverage to independent numerical references. The recorded run
+uses 50,000 paths and eight likelihood records, passing 57 fixed checks while
+retaining finite-sample deviations from theory.
+
 ```bash
 python subprojects/ou-calibration/run.py
+python subprojects/ou-calibration/verify.py
 ```
 
 ## Reproduce the experiments
@@ -132,7 +140,7 @@ Omit the notebook argument to execute all six notebooks. Execution regenerates t
 
 Fixed random seeds reproduce the reported runs. Small changes to a seed produce different individual samples while preserving the theoretical comparisons at a sufficiently large scale.
 
-GitHub Actions runs the unit tests, executes the supplementary notebook, and reproduces the OU calibration subproject on Python 3.11, 3.13, and 3.14 after every push to `main` and for every pull request.
+GitHub Actions runs the unit tests, executes the supplementary notebook, reproduces the OU calibration subproject, and verifies its theoretical results on Python 3.11, 3.13, and 3.14 after every push to `main` and for every pull request.
 
 ## Project layout
 

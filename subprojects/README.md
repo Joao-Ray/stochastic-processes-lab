@@ -11,3 +11,8 @@ mathematical modules and Python environment.
 The first subproject uses synthetic data with known truth so estimation and
 forecast errors can be measured. Future empirical applications should report
 their data source, preprocessing, and validation separately.
+
+The OU study also includes [theoretical derivations](ou-calibration/THEORY.md)
+and a separate [executed numerical verification](ou-calibration/results/verification/report.md).
+Run `python subprojects/ou-calibration/verify.py` to reproduce its quadrature,
+optimization, moment, MSE, and mean-shift comparisons.

@@ -28,6 +28,28 @@ class OUFit:
         return float(np.log(2) / self.theta)
 
 
+def conditional_ou_nll(
+    series: np.ndarray, dt: float, theta: float, mu: float, sigma: float,
+) -> float:
+    """Evaluate the exact Gaussian negative log likelihood given X_0.
+
+    This evaluates arbitrary physical parameters independently of fit_ou's
+    closed-form regression solution; it does not include an initial density.
+    """
+    values = np.asarray(series, dtype=float)
+    if values.ndim != 1 or values.size < 2 or np.any(~np.isfinite(values)):
+        raise ValueError("series must contain at least two finite observations")
+    if not np.isfinite(dt) or dt <= 0 or not np.isfinite(sigma) or sigma <= 0:
+        raise ValueError("dt and sigma must be positive and finite")
+    if not np.isfinite(theta) or theta <= 0 or not np.isfinite(mu):
+        raise ValueError("theta must be positive and finite, and mu finite")
+    decay = np.exp(-theta * dt)
+    variance = sigma**2 * -np.expm1(-2 * theta * dt) / (2 * theta)
+    residuals = values[1:] - mu - decay * (values[:-1] - mu)
+    return float(.5 * ((values.size-1) * np.log(2*np.pi*variance)
+                      + np.dot(residuals, residuals) / variance))
+
+
 def fit_ou(series: np.ndarray, dt: float) -> OUFit:
     """Fit exact OU transitions conditional on the first observation.
 

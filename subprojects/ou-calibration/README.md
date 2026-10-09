@@ -8,6 +8,10 @@ held-out futures, and tests the consequences of a change in the equilibrium mean
 [Every parameter fit, including failures](results/replications.csv) ·
 [中文阅读指南](GUIDE_ZH.md)
 
+[Step-by-step theoretical derivations](THEORY.md) ·
+[Executed numerical verification](results/verification/report.md) ·
+[Verification data and tolerances](results/verification/results.json)
+
 ## 1. Problem
 
 Given one equally spaced time series, can we recover the mean-reversion speed
@@ -28,6 +32,9 @@ q=\frac{\sigma^2}{2\theta}(1-\phi^2).$$
 
 This supplies a Gaussian AR(1) regression conditional on the first observation.
 No approximation of the transition law is required.
+
+The [theory note](THEORY.md) obtains this transition using an integrating factor
+and Itô isometry, then derives stationarity, autocorrelation, and half-life.
 
 ## 3. Theoretical Result
 
@@ -57,6 +64,11 @@ have approximately 95% coverage (the implementation uses the exact Gaussian
 quantile). Substituting estimated parameters creates **plug-in** limits that
 exclude parameter uncertainty; their actual coverage is measured below.
 
+The [full derivation](THEORY.md#4-factor-the-conditional-likelihood) gives the
+normal equations, the profile-likelihood minimum, and the interior OU mapping.
+It also derives multi-step forecast composition, conditional MSE, and the
+coverage loss under a paired mean shift.
+
 ## 4. Numerical Experiment
 
 The [configuration](config.json) fixes the design before execution:
@@ -80,6 +92,7 @@ Activate the root project's Python environment after installing
 
 ```bash
 python subprojects/ou-calibration/run.py
+python subprojects/ou-calibration/verify.py
 ```
 
 The same entry point works from inside this directory:
@@ -100,6 +113,16 @@ python subprojects/ou-calibration/run.py --config subprojects/ou-calibration/con
 structure. Python 3.11 or newer is supported. GitHub Actions runs this entry point
 alongside the unit tests and supplementary notebook.
 
+`verify.py` runs a separate theory check: nine adaptive-quadrature comparisons,
+eight likelihood records with two fixed optimization starts each, 50,000 paths
+for conditional moments and forecast MSE, and coupled mean-shift recursions.
+Its seed defaults to 20261009. Use `--paths`, `--seed`, and `--output` to repeat
+the verification without replacing the recorded results. For example:
+
+```bash
+python subprojects/ou-calibration/verify.py --seed 42 --output scratch/ou-verification
+```
+
 ## 5. Visualization
 
 ![Parameter recovery as the record grows](results/figures/parameter_recovery.png)
@@ -111,6 +134,29 @@ Also see [sampling frequency](results/figures/sampling_frequency.png) and
 The illustrative path is replication 0, not a sample selected for visual agreement.
 
 ## 6. Comparison with Theory
+
+### Independent verification of the formulas
+
+The [executed verification report](results/verification/report.md) passes all
+**57** fixed checks. Quadrature agrees with the variance formula within
+**4.44e-16**, and eight numerical optimizations agree with the closed-form
+conditional MLE to below **1e-10** in negative log likelihood. Numerical ODE
+integration verifies the paired-shift displacement within **2.57e-11**.
+
+For $h=3$, the optimal known-parameter forecast MSE is **0.450288** theoretically
+and **0.451650** empirically; persistence gives **5.263305** and **5.263872**.
+The shifted old-parameter interval has theoretical coverage **42.36%**, compared
+with **42.58%** empirically. This known-parameter benchmark differs from the
+estimated-parameter study below.
+
+The empirical mean at $h=1$ misses its pointwise normal 95% reference band by
+**3.42** Monte Carlo standard errors. That sample is retained. The fixed
+six-standard-error gates detect large implementation discrepancies; passing
+them does not imply that every scientific 95% interval contains its target.
+
+![Conditional MSE and sampling errors](results/verification/forecast_mse_verification.png)
+
+### Estimation and held-out prediction
 
 At $\Delta t=0.1$, the recorded $\theta$ RMSE falls from **0.8464** at $T=10$
 to **0.0766** at $T=300$. The short-record estimator has substantial finite-sample
