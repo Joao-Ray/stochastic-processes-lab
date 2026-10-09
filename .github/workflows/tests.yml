@@ -48,3 +48,13 @@ jobs:
         env:
           MPLBACKEND: Agg
         run: python subprojects/ou-calibration/verify.py --output /tmp/ou-verification
+
+      - name: Reproduce OU uncertainty benchmark
+        env:
+          MPLBACKEND: Agg
+        run: python subprojects/ou-inference-study/run.py --output /tmp/ou-uncertainty
+
+      - name: Reproduce independent OU confirmation
+        env:
+          MPLBACKEND: Agg
+        run: python subprojects/ou-inference-study/run.py --config subprojects/ou-inference-study/confirmation.json --output /tmp/ou-confirmation

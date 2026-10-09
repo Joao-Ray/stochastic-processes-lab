@@ -12,6 +12,11 @@ held-out futures, and tests the consequences of a change in the equilibrium mean
 [Executed numerical verification](results/verification/report.md) ·
 [Verification data and tolerances](results/verification/results.json)
 
+For confidence sets for the drift parameter, bias correction, and observation-
+noise stress tests, see the related [OU Drift Inference Study](../ou-inference-study/README.md).
+Its [working manuscript](../ou-inference-study/paper/MANUSCRIPT.md) reports
+finite-sample calibration and failures separately from this forecasting study.
+
 ## 1. Problem
 
 Given one equally spaced time series, can we recover the mean-reversion speed

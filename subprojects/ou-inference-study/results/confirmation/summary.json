@@ -1,0 +1,227 @@
+{
+  "config": {
+    "seed": 20261011,
+    "replications": 2000,
+    "bootstrap_replications": 999,
+    "level": 0.95,
+    "theta": 1.0,
+    "mu": 0.0,
+    "stationary_variance": 1.0,
+    "record_lengths": [
+      10.0
+    ],
+    "sampling_steps": [
+      0.1
+    ],
+    "noise_record_length": 10.0,
+    "noise_sampling_step": 0.1,
+    "measurement_noise_sd": []
+  },
+  "scenarios": [
+    {
+      "id": "r=10,a=0.1,eta=0",
+      "r": 10.0,
+      "a": 0.1,
+      "noise_sd": 0.0,
+      "duration": 10.0,
+      "dt": 0.1,
+      "n_transitions": 100,
+      "pseudo_theta": 1.0,
+      "attempted": 2000,
+      "interior_fits": 2000,
+      "mle": {
+        "n": 2000,
+        "bias": 0.4916618228717574,
+        "bias_mc_se": 0.01535754789822752,
+        "rmse": 0.8445140902820023,
+        "rmse_mc_se": 0.020152911166796728
+      },
+      "slope": {
+        "n": 2000,
+        "bias": -0.041436756428609015,
+        "bias_mc_se": 0.0012716406634613907,
+        "rmse": 0.07035287959482506,
+        "rmse_mc_se": 0.0015025601480315172
+      },
+      "corrected": {
+        "n": 1976,
+        "bias": 0.0820636824984885,
+        "bias_mc_se": 0.015386135938782212,
+        "rmse": 0.688681694805675,
+        "rmse_mc_se": 0.01752934339096272
+      },
+      "common_point_estimates": {
+        "mle": {
+          "n": 1976,
+          "bias": 0.5048976205193606,
+          "bias_mc_se": 0.015304149880526738,
+          "rmse": 0.8470538290145584,
+          "rmse_mc_se": 0.02032978006337352
+        },
+        "corrected": {
+          "n": 1976,
+          "bias": 0.0820636824984885,
+          "bias_mc_se": 0.015386135938782212,
+          "rmse": 0.688681694805675,
+          "rmse_mc_se": 0.01752934339096272
+        }
+      },
+      "paired_correction_minus_mle_mse": {
+        "n": 1976,
+        "difference": -0.24321771248780782,
+        "mc_se": 0.01314646368466866
+      },
+      "bootstrap_attempted": 1998000,
+      "bootstrap_inadmissible_slopes": 126,
+      "methods": {
+        "wald": {
+          "available": 2000,
+          "attempted": 2000,
+          "unavailable": 0,
+          "empty": 0,
+          "unbounded_upper": 0,
+          "conditional": {
+            "n": 2000,
+            "coverage": 0.922,
+            "mc_se": 0.005996498978570745,
+            "wilson_95": [
+              0.9094215182294803,
+              0.9329604938651423
+            ]
+          },
+          "success_and_coverage": {
+            "n": 2000,
+            "coverage": 0.922,
+            "mc_se": 0.005996498978570745,
+            "wilson_95": [
+              0.9094215182294803,
+              0.9329604938651423
+            ]
+          },
+          "finite_nonempty_width_n": 2000,
+          "finite_nonempty_mean_width": 2.2597725768985506,
+          "finite_nonempty_width_mc_se": 0.01378873826322853,
+          "available_mean_width_is_infinite": false
+        },
+        "profile": {
+          "available": 2000,
+          "attempted": 2000,
+          "unavailable": 0,
+          "empty": 0,
+          "unbounded_upper": 0,
+          "conditional": {
+            "n": 2000,
+            "coverage": 0.8995,
+            "mc_se": 0.006723085229267885,
+            "wilson_95": [
+              0.8855475124040529,
+              0.9119207668182258
+            ]
+          },
+          "success_and_coverage": {
+            "n": 2000,
+            "coverage": 0.8995,
+            "mc_se": 0.006723085229267885,
+            "wilson_95": [
+              0.8855475124040529,
+              0.9119207668182258
+            ]
+          },
+          "finite_nonempty_width_n": 2000,
+          "finite_nonempty_mean_width": 2.297368323756803,
+          "finite_nonempty_width_mc_se": 0.014086672202518764,
+          "available_mean_width_is_infinite": false
+        },
+        "bootstrap_basic": {
+          "available": 2000,
+          "attempted": 2000,
+          "unavailable": 0,
+          "empty": 0,
+          "unbounded_upper": 0,
+          "conditional": {
+            "n": 2000,
+            "coverage": 0.925,
+            "mc_se": 0.0058896094946948715,
+            "wilson_95": [
+              0.9126241578681623,
+              0.9357463519427728
+            ]
+          },
+          "success_and_coverage": {
+            "n": 2000,
+            "coverage": 0.925,
+            "mc_se": 0.0058896094946948715,
+            "wilson_95": [
+              0.9126241578681623,
+              0.9357463519427728
+            ]
+          },
+          "finite_nonempty_width_n": 2000,
+          "finite_nonempty_mean_width": 2.0792508767275883,
+          "finite_nonempty_width_mc_se": 0.017433039943969504,
+          "available_mean_width_is_infinite": false
+        },
+        "bootstrap_profile": {
+          "available": 2000,
+          "attempted": 2000,
+          "unavailable": 0,
+          "empty": 0,
+          "unbounded_upper": 0,
+          "conditional": {
+            "n": 2000,
+            "coverage": 0.9275,
+            "mc_se": 0.005798437289477226,
+            "wilson_95": [
+              0.9152970932700819,
+              0.9380638313044467
+            ]
+          },
+          "success_and_coverage": {
+            "n": 2000,
+            "coverage": 0.9275,
+            "mc_se": 0.005798437289477226,
+            "wilson_95": [
+              0.9152970932700819,
+              0.9380638313044467
+            ]
+          },
+          "finite_nonempty_width_n": 2000,
+          "finite_nonempty_mean_width": 2.5155410950863835,
+          "finite_nonempty_width_mc_se": 0.014282732251062778,
+          "available_mean_width_is_infinite": false
+        }
+      },
+      "paired_bootstrap_minus_profile": {
+        "n": 2000,
+        "difference": 0.028,
+        "mc_se": 0.003757001135049653
+      },
+      "joint_bootstrap_minus_profile": {
+        "n": 2000,
+        "difference": 0.028,
+        "mc_se": 0.003757001135049653
+      }
+    }
+  ],
+  "paired_sampling_comparisons": [],
+  "data_source": "Synthetic stationary exact OU; optional independent Gaussian measurement error",
+  "seed_scheme": "SeedSequence([seed, role, group_or_scenario, optional_replication]); role 0 latent, 1 noise, 2 bootstrap",
+  "bootstrap_initialization": "Observed first value, fixed conditional on each training series",
+  "versions": {
+    "python": "3.14.7",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2"
+  },
+  "source_sha256": {
+    "subprojects/ou-inference-study/run.py": "05366b4635357c3cc891490aa85d2106e4ec0cf0ced0bd6d7b8b56fba55ed6c6",
+    "src/ou_uncertainty.py": "251759de71f9abe760fc44c65d494f8258528b993af4e49ca66e875c4d3b68ae",
+    "src/ou_inference.py": "4c5f06a386077bec5f3a3a5d9986ce8c5e1c436e82f5408977173789c1685873",
+    "src/ou_process.py": "79488afdf452c606e78800134a5fcb3590840bede2a8dd5bd57668001a4817ef",
+    "subprojects/ou-inference-study/PROTOCOL.md": "3076fea389d32222c75312cd3cea12ff8f7a57b9452712d5d166f3f860a70bf0",
+    "subprojects/ou-inference-study/THEORY.md": "42bd29a98a91a4630a922e1185490f7d9d26c081950599919f335eec57a48f6e"
+  },
+  "config_sha256": "89fa53936098aca4594cb47e4abfcb632b7f7361c7a3a41c804d8d89df1408e3",
+  "elapsed_study_seconds": 3.6414384160016198,
+  "record_archive_sha256": "4feeed7c3ed88845a9cc96d7207e91e26b5a0fb0c11696a128bb1afcf2ab6641"
+}

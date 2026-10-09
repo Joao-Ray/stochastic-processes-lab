@@ -100,6 +100,27 @@ python subprojects/ou-calibration/run.py
 python subprojects/ou-calibration/verify.py
 ```
 
+**[OU Drift Inference Study](subprojects/ou-inference-study/README.md)** compares
+Wald, profile-likelihood, basic-bootstrap, and bootstrap-profile confidence
+sets across finite-duration, sampling-density, and observation-noise designs.
+The main study runs 22,000 outer attempts; an independently seeded confirmation
+adds 2,000. It reports availability, unbounded sets, paired differences, and
+Monte Carlo uncertainty. In the confirmation, bootstrap-profile coverage is
+**92.75%**, with Wilson 95% interval **91.53%–93.81%**, retaining the failure to
+reach nominal 95% coverage.
+
+[Study protocol](subprojects/ou-inference-study/PROTOCOL.md) ·
+[Executed results](subprojects/ou-inference-study/results/main/report.md) ·
+[Working manuscript](subprojects/ou-inference-study/paper/MANUSCRIPT.md) ·
+[中文研究说明](subprojects/ou-inference-study/RESEARCH_STATUS_ZH.md)
+
+This is a reproducible methods benchmark and manuscript draft. An original
+statistical contribution and journal suitability have not been established.
+
+```bash
+python subprojects/ou-inference-study/run.py
+```
+
 ## Reproduce the experiments
 
 Use Python 3.11 or newer. On macOS or Linux, create a virtual environment and install the dependencies:
@@ -140,7 +161,7 @@ Omit the notebook argument to execute all six notebooks. Execution regenerates t
 
 Fixed random seeds reproduce the reported runs. Small changes to a seed produce different individual samples while preserving the theoretical comparisons at a sufficiently large scale.
 
-GitHub Actions runs the unit tests, executes the supplementary notebook, reproduces the OU calibration subproject, and verifies its theoretical results on Python 3.11, 3.13, and 3.14 after every push to `main` and for every pull request.
+GitHub Actions runs the unit tests, executes the supplementary notebook, reproduces OU calibration and its theoretical verification, and executes the full OU uncertainty benchmark and independent confirmation on Python 3.11, 3.13, and 3.14 after every push to `main` and for every pull request.
 
 ## Project layout
 
