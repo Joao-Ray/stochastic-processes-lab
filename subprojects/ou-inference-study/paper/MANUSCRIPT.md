@@ -5,6 +5,11 @@ simulations and established statistical procedures. It does not claim a novel
 estimator, a new calibration theorem, or readiness for submission to a Q1 journal.
 Authorship and affiliations have not been assigned.
 
+**Subsequent extension:** [stationary finite-sample supplement](FINITE_SAMPLE_SUPPLEMENT.md)
+adds nuisance-free Monte Carlo rank calibration, a conservative continuous-cell
+coverage proof, and executed main/independent confirmation results. The present
+benchmark and its fixed-X0 bootstrap construction are retained separately.
+
 ## Abstract
 
 We examine finite-window inference for the positive drift parameter of a scalar

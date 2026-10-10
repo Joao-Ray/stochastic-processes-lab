@@ -6,7 +6,8 @@ calibrated when observation duration is short, sampling is sparse, or the
 noise-free observation model is wrong. The equilibrium mean and diffusion
 scale are unknown nuisance parameters.
 
-**Status:** completed computational benchmark and working manuscript. The
+**Status:** completed computational benchmark, stationary finite-sample
+calibration extension, and working manuscript. The
 methods are established statistical procedures; this project has not established
 an original methodological contribution or readiness for a Q1 journal.
 
@@ -14,6 +15,34 @@ an original methodological contribution or readiness for a Q1 journal.
 [Independent confirmation](results/confirmation/report.md) ·
 [Working manuscript](paper/MANUSCRIPT.md) · [Literature positioning](LITERATURE.md) ·
 [中文研究说明](RESEARCH_STATUS_ZH.md)
+
+## Stationary finite-sample extension
+
+The [new stage](finite-sample/README.md) calibrates an affine-invariant profile
+statistic using independent stationary-null Monte Carlo ranks, without fitting
+nuisance parameters. [Explicit proofs](FINITE_SAMPLE_THEORY.md) combine
+exchangeability and a path-KL/Pinsker bound to retain entire parameter cells
+with continuous-parameter coverage at least 95% under **stationary, noise-free
+Gaussian OU** assumptions. This is an application of existing theory; priority
+and novelty have not been established.
+
+The extension archives **12,000 main inference records and 4,000 independent
+confirmation records**. Main clean/noisy data are reused and audited against
+the preceding study. In the short-record confirmation, chi-square-profile,
+point-rank and buffered true-cell coverage are **81.35%, 94.65% and 95.95%**,
+respectively. The last Wilson interval is **94.99%–96.73%**. Coverage estimates
+include every record, with fresh banks and Monte Carlo uncertainty.
+
+Precision is limited: a sparse example retains all positive drift values;
+other examples are disconnected. Full inversions are saved for three fixed
+examples only, and every hull reaches zero. Noise-SD-0.5 buffered membership
+is only **19.60%**. The guarantee does not extend to noise or fixed initial
+states. Two point-null power measurements also show limited discrimination.
+
+[Main report](finite-sample/results/main/report.md) ·
+[Independent confirmation](finite-sample/results/confirmation/report.md) ·
+[Proofs](FINITE_SAMPLE_THEORY.md) ·
+[Manuscript supplement](paper/FINITE_SAMPLE_SUPPLEMENT.md)
 
 ## Research design
 
@@ -92,5 +121,7 @@ Stationary initialization is part of this design. The likelihood is conditional
 on the observed initial state; bootstrap training paths also fix that value.
 The confirmation changes both B and seed and therefore cannot isolate their
 individual effects. The literature search is a selected positioning review,
-not a systematic review or a certification of novelty. Noise-aware inference,
-nonstationary-start sensitivity, and a new calibration theorem remain open work.
+not a systematic review or a certification of novelty. The separate extension
+adds stationary calibration arguments and a fixed-start diagnostic; it does
+not supply noise-aware inference or a general nonstationary-start guarantee.
+Originality, sharper precision, and robust calibration remain open work.

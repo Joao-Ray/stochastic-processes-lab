@@ -1,0 +1,564 @@
+{
+  "config": {
+    "data_seed": 20261010,
+    "mc_seed": 20261014,
+    "replications": 2000,
+    "simulations": 399,
+    "alpha": 0.05,
+    "resolution": 0.04,
+    "u_max": 5.0,
+    "examples": true,
+    "scenarios": [
+      {
+        "r": 2.0,
+        "a": 0.5,
+        "noise_sd": 0.0,
+        "start": "stationary"
+      },
+      {
+        "r": 2.0,
+        "a": 0.1,
+        "noise_sd": 0.0,
+        "start": "stationary"
+      },
+      {
+        "r": 10.0,
+        "a": 0.1,
+        "noise_sd": 0.0,
+        "start": "stationary"
+      },
+      {
+        "r": 30.0,
+        "a": 0.1,
+        "noise_sd": 0.0,
+        "start": "stationary"
+      },
+      {
+        "r": 10.0,
+        "a": 0.1,
+        "noise_sd": 0.5,
+        "start": "stationary"
+      },
+      {
+        "r": 10.0,
+        "a": 0.1,
+        "noise_sd": 0.0,
+        "start": "fixed5"
+      }
+    ]
+  },
+  "truth": {
+    "theta": 1.0,
+    "mu": 0.0,
+    "sigma": 1.4142135623730951,
+    "stationary_variance": 1.0
+  },
+  "scenarios": [
+    {
+      "id": "r=2,a=0.5,eta=0,start=stationary",
+      "r": 2.0,
+      "a": 0.5,
+      "noise_sd": 0.0,
+      "start": "stationary",
+      "n_transitions": 4,
+      "dt": 0.5,
+      "theorem_assumptions_met": true,
+      "rank_coverage": {
+        "n": 2000,
+        "value": 0.9455,
+        "mc_se": 0.005075911248239078,
+        "wilson_95": [
+          0.9346702670259668,
+          0.9546216438464368
+        ]
+      },
+      "cell_coverage": {
+        "n": 2000,
+        "value": 0.955,
+        "mc_se": 0.004635461142108735,
+        "wilson_95": [
+          0.9450093040187729,
+          0.9632461829552866
+        ]
+      },
+      "profile_coverage": {
+        "n": 2000,
+        "value": 0.9035,
+        "mc_se": 0.006602565789145914,
+        "wilson_95": [
+          0.889774970136178,
+          0.9156779727078507
+        ]
+      },
+      "old_bootstrap_conditional": {
+        "n": 893,
+        "value": 0.9787234042553191,
+        "mc_se": 0.004828979130009988,
+        "wilson_95": [
+          0.9670085066836634,
+          0.9863372509090845
+        ]
+      },
+      "paired_rank_minus_profile": {
+        "n": 2000,
+        "difference": 0.042,
+        "mc_se": 0.004486431101891124
+      },
+      "paired_cell_minus_profile": {
+        "n": 2000,
+        "difference": 0.0515,
+        "mc_se": 0.004943287675881636
+      },
+      "true_cell": {
+        "index": 35,
+        "lower": 0.6043677771171635,
+        "upper": 0.616909302877065,
+        "center": 0.6106768328168442,
+        "tv_bound": 0.011730054905887436,
+        "effective_alpha": 0.038269945094112565
+      },
+      "power_half": {
+        "n": 0,
+        "value": null,
+        "mc_se": null,
+        "wilson_95": null
+      },
+      "power_double": {
+        "n": 0,
+        "value": null,
+        "mc_se": null,
+        "wilson_95": null
+      }
+    },
+    {
+      "id": "r=2,a=0.1,eta=0,start=stationary",
+      "r": 2.0,
+      "a": 0.1,
+      "noise_sd": 0.0,
+      "start": "stationary",
+      "n_transitions": 20,
+      "dt": 0.1,
+      "theorem_assumptions_met": true,
+      "rank_coverage": {
+        "n": 2000,
+        "value": 0.946,
+        "mc_se": 0.005053909377897473,
+        "wilson_95": [
+          0.9352121487009426,
+          0.9550778451241797
+        ]
+      },
+      "cell_coverage": {
+        "n": 2000,
+        "value": 0.9605,
+        "mc_se": 0.004355441998236229,
+        "wilson_95": [
+          0.9510433073255731,
+          0.9681910921283929
+        ]
+      },
+      "profile_coverage": {
+        "n": 2000,
+        "value": 0.8245,
+        "mc_se": 0.008505872971071223,
+        "wilson_95": [
+          0.8072110873800707,
+          0.8405447489343961
+        ]
+      },
+      "old_bootstrap_conditional": {
+        "n": 1957,
+        "value": 0.8569238630556975,
+        "mc_se": 0.007915152895937598,
+        "wilson_95": [
+          0.8407106409273398,
+          0.8717385954531452
+        ]
+      },
+      "paired_rank_minus_profile": {
+        "n": 2000,
+        "difference": 0.1215,
+        "mc_se": 0.007307227434971023
+      },
+      "paired_cell_minus_profile": {
+        "n": 2000,
+        "difference": 0.136,
+        "mc_se": 0.007666902288104868
+      },
+      "true_cell": {
+        "index": 167,
+        "lower": 0.9035216994420955,
+        "upper": 0.9051482536448665,
+        "center": 0.9043382599038057,
+        "tv_bound": 0.0134753259260888,
+        "effective_alpha": 0.036524674073911204
+      },
+      "power_half": {
+        "n": 0,
+        "value": null,
+        "mc_se": null,
+        "wilson_95": null
+      },
+      "power_double": {
+        "n": 0,
+        "value": null,
+        "mc_se": null,
+        "wilson_95": null
+      }
+    },
+    {
+      "id": "r=10,a=0.1,eta=0,start=stationary",
+      "r": 10.0,
+      "a": 0.1,
+      "noise_sd": 0.0,
+      "start": "stationary",
+      "n_transitions": 100,
+      "dt": 0.1,
+      "theorem_assumptions_met": true,
+      "rank_coverage": {
+        "n": 2000,
+        "value": 0.9425,
+        "mc_se": 0.005205465877325487,
+        "wilson_95": [
+          0.9314237261895166,
+          0.9518796869665744
+        ]
+      },
+      "cell_coverage": {
+        "n": 2000,
+        "value": 0.955,
+        "mc_se": 0.004635461142108735,
+        "wilson_95": [
+          0.9450093040187729,
+          0.9632461829552866
+        ]
+      },
+      "profile_coverage": {
+        "n": 2000,
+        "value": 0.901,
+        "mc_se": 0.006678285708173917,
+        "wilson_95": [
+          0.8871320405740596,
+          0.9133304875063756
+        ]
+      },
+      "old_bootstrap_conditional": {
+        "n": 2000,
+        "value": 0.92,
+        "mc_se": 0.006066300355241239,
+        "wilson_95": [
+          0.9072892548014819,
+          0.9311004254822657
+        ]
+      },
+      "paired_rank_minus_profile": {
+        "n": 2000,
+        "difference": 0.0415,
+        "mc_se": 0.004460809838157877
+      },
+      "paired_cell_minus_profile": {
+        "n": 2000,
+        "difference": 0.054,
+        "mc_se": 0.005055173329243454
+      },
+      "true_cell": {
+        "index": 374,
+        "lower": 0.9044228044017684,
+        "upper": 0.9051482536448665,
+        "center": 0.9047861853988955,
+        "tv_bound": 0.01349301455994893,
+        "effective_alpha": 0.03650698544005107
+      },
+      "power_half": {
+        "n": 2000,
+        "value": 0.1725,
+        "mc_se": 0.008448187675472178,
+        "wilson_95": [
+          0.1565736585228646,
+          0.189682007446356
+        ]
+      },
+      "power_double": {
+        "n": 2000,
+        "value": 0.2155,
+        "mc_se": 0.009194012997597947,
+        "wilson_95": [
+          0.19803448672608792,
+          0.23405631317694492
+        ]
+      }
+    },
+    {
+      "id": "r=30,a=0.1,eta=0,start=stationary",
+      "r": 30.0,
+      "a": 0.1,
+      "noise_sd": 0.0,
+      "start": "stationary",
+      "n_transitions": 300,
+      "dt": 0.1,
+      "theorem_assumptions_met": true,
+      "rank_coverage": {
+        "n": 2000,
+        "value": 0.954,
+        "mc_se": 0.0046842288586276416,
+        "wilson_95": [
+          0.9439163444279334,
+          0.9623429766406889
+        ]
+      },
+      "cell_coverage": {
+        "n": 2000,
+        "value": 0.9705,
+        "mc_se": 0.0037835003634200943,
+        "wilson_95": [
+          0.9621349108960856,
+          0.9770611476122554
+        ]
+      },
+      "profile_coverage": {
+        "n": 2000,
+        "value": 0.945,
+        "mc_se": 0.005097793640389931,
+        "wilson_95": [
+          0.9341286162883299,
+          0.9541652116313549
+        ]
+      },
+      "old_bootstrap_conditional": {
+        "n": 2000,
+        "value": 0.952,
+        "mc_se": 0.004779958158812692,
+        "wilson_95": [
+          0.9417339082484883,
+          0.9605330810092589
+        ]
+      },
+      "paired_rank_minus_profile": {
+        "n": 2000,
+        "difference": 0.009,
+        "mc_se": 0.002227550446229052
+      },
+      "paired_cell_minus_profile": {
+        "n": 2000,
+        "difference": 0.0255,
+        "mc_se": 0.0035257751694163135
+      },
+      "true_cell": {
+        "index": 649,
+        "lower": 0.9048139803298876,
+        "upper": 0.9052316475240288,
+        "center": 0.9050230320699999,
+        "tv_bound": 0.013485674813307636,
+        "effective_alpha": 0.03651432518669237
+      },
+      "power_half": {
+        "n": 0,
+        "value": null,
+        "mc_se": null,
+        "wilson_95": null
+      },
+      "power_double": {
+        "n": 0,
+        "value": null,
+        "mc_se": null,
+        "wilson_95": null
+      }
+    },
+    {
+      "id": "r=10,a=0.1,eta=0.5,start=stationary",
+      "r": 10.0,
+      "a": 0.1,
+      "noise_sd": 0.5,
+      "start": "stationary",
+      "n_transitions": 100,
+      "dt": 0.1,
+      "theorem_assumptions_met": false,
+      "rank_coverage": {
+        "n": 2000,
+        "value": 0.157,
+        "mc_se": 0.008134832512104966,
+        "wilson_95": [
+          0.14171529226202792,
+          0.17359980217291157
+        ]
+      },
+      "cell_coverage": {
+        "n": 2000,
+        "value": 0.196,
+        "mc_se": 0.00887648579112252,
+        "wilson_95": [
+          0.17919210630660154,
+          0.21397345844040022
+        ]
+      },
+      "profile_coverage": {
+        "n": 2000,
+        "value": 0.1015,
+        "mc_se": 0.006752693906878943,
+        "wilson_95": [
+          0.0890195479939982,
+          0.11550833868916041
+        ]
+      },
+      "old_bootstrap_conditional": {
+        "n": 2000,
+        "value": 0.121,
+        "mc_se": 0.007292427579345577,
+        "wilson_95": [
+          0.10742889948295903,
+          0.13602422235623068
+        ]
+      },
+      "paired_rank_minus_profile": {
+        "n": 2000,
+        "difference": 0.0555,
+        "mc_se": 0.005120838456077932
+      },
+      "paired_cell_minus_profile": {
+        "n": 2000,
+        "difference": 0.0945,
+        "mc_se": 0.0065426506967030985
+      },
+      "true_cell": {
+        "index": 374,
+        "lower": 0.9044228044017684,
+        "upper": 0.9051482536448665,
+        "center": 0.9047861853988955,
+        "tv_bound": 0.01349301455994893,
+        "effective_alpha": 0.03650698544005107
+      },
+      "power_half": {
+        "n": 0,
+        "value": null,
+        "mc_se": null,
+        "wilson_95": null
+      },
+      "power_double": {
+        "n": 0,
+        "value": null,
+        "mc_se": null,
+        "wilson_95": null
+      }
+    },
+    {
+      "id": "r=10,a=0.1,eta=0,start=fixed5",
+      "r": 10.0,
+      "a": 0.1,
+      "noise_sd": 0.0,
+      "start": "fixed5",
+      "n_transitions": 100,
+      "dt": 0.1,
+      "theorem_assumptions_met": false,
+      "rank_coverage": {
+        "n": 2000,
+        "value": 0.963,
+        "mc_se": 0.004220841148396847,
+        "wilson_95": [
+          0.9538001190471888,
+          0.9704246951703708
+        ]
+      },
+      "cell_coverage": {
+        "n": 2000,
+        "value": 0.974,
+        "mc_se": 0.0035583704135460676,
+        "wilson_95": [
+          0.9660647268553368,
+          0.9801179123220352
+        ]
+      },
+      "profile_coverage": {
+        "n": 2000,
+        "value": 0.9255,
+        "mc_se": 0.005871530890662162,
+        "wilson_95": [
+          0.9131584426965994,
+          0.9362101500670542
+        ]
+      },
+      "old_bootstrap_conditional": {
+        "n": 0,
+        "value": null,
+        "mc_se": null,
+        "wilson_95": null
+      },
+      "paired_rank_minus_profile": {
+        "n": 2000,
+        "difference": 0.0375,
+        "mc_se": 0.0042492238057645
+      },
+      "paired_cell_minus_profile": {
+        "n": 2000,
+        "difference": 0.0485,
+        "mc_se": 0.004804728682127058
+      },
+      "true_cell": {
+        "index": 374,
+        "lower": 0.9044228044017684,
+        "upper": 0.9051482536448665,
+        "center": 0.9047861853988955,
+        "tv_bound": 0.01349301455994893,
+        "effective_alpha": 0.03650698544005107
+      },
+      "power_half": {
+        "n": 0,
+        "value": null,
+        "mc_se": null,
+        "wilson_95": null
+      },
+      "power_double": {
+        "n": 0,
+        "value": null,
+        "mc_se": null,
+        "wilson_95": null
+      }
+    }
+  ],
+  "parent_data_config": {
+    "seed": 20261010,
+    "replications": 2000,
+    "bootstrap_replications": 399,
+    "level": 0.95,
+    "theta": 1.0,
+    "mu": 0.0,
+    "stationary_variance": 1.0,
+    "record_lengths": [
+      2.0,
+      10.0,
+      30.0
+    ],
+    "sampling_steps": [
+      0.02,
+      0.1,
+      0.5
+    ],
+    "noise_record_length": 10.0,
+    "noise_sampling_step": 0.1,
+    "measurement_noise_sd": [
+      0.2,
+      0.5
+    ]
+  },
+  "matched_baseline_archive_sha256": "d00108e1687a1283434b2c57107c96310e489e9fcd03748839011ec8a7d5d5fb",
+  "bank_seed_scheme": "SeedSequence([mc_seed,20,scenario_index,replication,role]); roles 0 point,1 cell,2 half,3 double",
+  "data_seed_scheme": "Parent SeedSequence([data_seed,0,duration_group]); noise role 1",
+  "versions": {
+    "python": "3.14.7",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2"
+  },
+  "source_sha256": {
+    "subprojects/ou-inference-study/finite-sample/run.py": "3fa3be1afd654500e5b6ca71cdac05237be865dacb843580944c072148a0d227",
+    "src/ou_monte_carlo.py": "ac015c700b02a031b8441b84fdc386cf486f269ea976c3e85128f54e1d1b0385",
+    "src/ou_uncertainty.py": "251759de71f9abe760fc44c65d494f8258528b993af4e49ca66e875c4d3b68ae",
+    "src/ou_inference.py": "4c5f06a386077bec5f3a3a5d9986ce8c5e1c436e82f5408977173789c1685873",
+    "src/ou_process.py": "79488afdf452c606e78800134a5fcb3590840bede2a8dd5bd57668001a4817ef",
+    "subprojects/ou-inference-study/finite-sample/README.md": "522788851042c5002da80d26bd2834a6c975b5f767140f4c740b1186e7920556",
+    "subprojects/ou-inference-study/FINITE_SAMPLE_THEORY.md": "505115282b19640100c0cfa1791114ce783ee5efd2e790a6037dce39a22edf05",
+    "subprojects/ou-inference-study/config.json": "cc2fada8018057682b931c0d341a6fd250287b3b1eb9c78b001246835e1deebc"
+  },
+  "config_sha256": "9c08eeb32f9647a387d12147686f4df070c4dc0664e7b694e4bcc81be42fe6e9",
+  "elapsed_study_seconds": 22.874485542008188,
+  "record_archive_sha256": "c9bf89d174ae94faf0763193ade0ce92e1c9cdb9809f8d8f97ec1d988dc57ddc"
+}

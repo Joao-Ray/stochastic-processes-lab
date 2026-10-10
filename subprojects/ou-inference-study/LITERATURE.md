@@ -1,6 +1,7 @@
 # Literature positioning and contribution boundaries
 
 Selected primary research inspected on 2026-10-09. This is a starting bibliography,
+Additional calibration sources inspected on 2026-10-10. This is
 not a systematic search, and it cannot establish that an unobserved competitor
 or theorem does not exist. No journal quartile is asserted here.
 
@@ -14,6 +15,25 @@ or theorem does not exist. No journal quartile is asserted here.
 | Liu, Feng & Xiao (2026), [DOI 10.1007/s10463-026-00993-w](https://doi.org/10.1007/s10463-026-00993-w) | Fixed-domain covariance estimation for anisotropic OU fields in dimension at least two | A recent adjacent result. Its field model and estimands differ from scalar OU conditional drift inference; its theorems are not imported here. |
 
 ## What this addition provides
+
+### Stationary calibration extension
+
+[Dufour (2006)](https://doi.org/10.1016/j.jeconom.2005.06.007),
+[author-hosted working version](https://jeanmariedufour.github.io/Dufour_1995_MCT_W.pdf),
+provides the general Monte Carlo test framework, including finite-sample rank
+calibration and nuisance-parameter issues. The plus-one p-value and
+exchangeability principle in this extension are established tools.
+[Stanford information-theory notes](https://web.stanford.edu/class/stats311/lecture-notes.pdf)
+give the standard Pinsker inequality with natural-log KL divergence.
+
+The [OU specialization](FINITE_SAMPLE_THEORY.md) uses an affine-invariant
+statistic to remove stationary location/scale nuisance parameters, derives
+the canonical path KL, and buffers cell tests by a total-variation bound.
+The derivation and executed verification are explicit. A selected search
+cannot establish priority for this envelope. Its noise-free stationary
+assumptions and limited precision leave the broader research target open.
+
+### Preceding benchmark
 
 - A fully specified, reproducible comparison of four uncertainty procedures.
 - Algebraic profile inversion with explicit empty/unbounded/boundary handling.
@@ -35,6 +55,7 @@ retaining boundary cases and quantifying its finite-sample error?
 Answering this requires a focused search of simulation-based test inversion,
 state-space OU inference, weak-identification theory, and bootstrap calibration.
 The present chi-square and plug-in bootstrap procedures provide baselines.
-A proposed method would need a precisely stated claim, a proof or controlled
+A broader proposed method would need a precisely stated claim, a proof or controlled
 error bound under explicit assumptions, and independent comparisons against
-the strongest relevant published methods. No such claim is established here.
+the strongest relevant published methods. The stationary envelope addresses
+a restricted noise-free case; the broader noise-aware claim is not established.

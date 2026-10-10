@@ -8,6 +8,7 @@ mathematical modules and Python environment.
 | --- | --- | --- | --- |
 | [OU Calibration and Forecasting](ou-calibration/README.md) | How do observation design, estimated parameters, and a future mean shift affect recovery and prediction? | `python subprojects/ou-calibration/run.py` | [Report](ou-calibration/results/report.md) |
 | [OU Drift Inference Study](ou-inference-study/README.md) | How do finite windows, boundary failures, and observation noise affect drift confidence-set coverage? | `python subprojects/ou-inference-study/run.py` | [Main](ou-inference-study/results/main/report.md), [confirmation](ou-inference-study/results/confirmation/report.md) |
+| [Stationary finite-sample extension](ou-inference-study/finite-sample/README.md) | Can stationary Monte Carlo ranks and a KL/TV cell bound control continuous-parameter coverage? | `python subprojects/ou-inference-study/finite-sample/run.py` | [Main](ou-inference-study/finite-sample/results/main/report.md), [confirmation](ou-inference-study/finite-sample/results/confirmation/report.md) |
 
 The first subproject uses synthetic data with known truth so estimation and
 forecast errors can be measured. Future empirical applications should report
@@ -22,3 +23,9 @@ The inference study adds a [fixed design protocol](ou-inference-study/PROTOCOL.m
 [uncertainty derivations](ou-inference-study/THEORY.md), and
 [working manuscript](ou-inference-study/paper/MANUSCRIPT.md). Its methods are
 established baselines; a novel statistical contribution is not yet claimed.
+
+The [finite-sample extension](ou-inference-study/FINITE_SAMPLE_THEORY.md)
+adds a proof under stationary noise-free assumptions, 16,000 archived inference
+records, assumption-stress diagnostics and a [manuscript supplement](ou-inference-study/paper/FINITE_SAMPLE_SUPPLEMENT.md).
+Its conservative sets can be uninformative or disconnected; no novelty claim
+or noise-aware guarantee is made.

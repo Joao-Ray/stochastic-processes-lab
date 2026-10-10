@@ -1,0 +1,14 @@
+{
+  "data_seed": 20261015,
+  "mc_seed": 20261016,
+  "replications": 2000,
+  "simulations": 999,
+  "alpha": 0.05,
+  "resolution": 0.04,
+  "u_max": 5.0,
+  "examples": false,
+  "scenarios": [
+    {"r": 2.0, "a": 0.1, "noise_sd": 0.0, "start": "stationary"},
+    {"r": 10.0, "a": 0.1, "noise_sd": 0.0, "start": "stationary"}
+  ]
+}

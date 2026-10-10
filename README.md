@@ -117,8 +117,23 @@ reach nominal 95% coverage.
 This is a reproducible methods benchmark and manuscript draft. An original
 statistical contribution and journal suitability have not been established.
 
+The [stationary finite-sample extension](subprojects/ou-inference-study/finite-sample/README.md)
+adds Monte Carlo rank calibration and a conservative continuous-cell coverage
+proof for stationary noise-free OU. It archives 12,000 main inference records
+and 4,000 independent confirmation records. In the short-record confirmation,
+chi-square-profile coverage is **81.35%**, point-rank **94.65%**, and buffered
+cell membership **95.95%** (Wilson interval **94.99%–96.73%**).
+The sets can be disconnected or wholly uninformative, and the guarantee does
+not cover measurement noise or fixed initial states. Existing theory is credited.
+
+[Proofs](subprojects/ou-inference-study/FINITE_SAMPLE_THEORY.md) ·
+[Executed calibration](subprojects/ou-inference-study/finite-sample/results/main/report.md) ·
+[Independent confirmation](subprojects/ou-inference-study/finite-sample/results/confirmation/report.md) ·
+[Manuscript supplement](subprojects/ou-inference-study/paper/FINITE_SAMPLE_SUPPLEMENT.md)
+
 ```bash
 python subprojects/ou-inference-study/run.py
+python subprojects/ou-inference-study/finite-sample/run.py
 ```
 
 ## Reproduce the experiments
@@ -161,7 +176,7 @@ Omit the notebook argument to execute all six notebooks. Execution regenerates t
 
 Fixed random seeds reproduce the reported runs. Small changes to a seed produce different individual samples while preserving the theoretical comparisons at a sufficiently large scale.
 
-GitHub Actions runs the unit tests, executes the supplementary notebook, reproduces OU calibration and its theoretical verification, and executes the full OU uncertainty benchmark and independent confirmation on Python 3.11, 3.13, and 3.14 after every push to `main` and for every pull request.
+GitHub Actions runs the unit tests, executes the supplementary notebook, reproduces OU calibration and its theoretical verification, and executes the full OU uncertainty benchmark, stationary finite-sample extension, and their independent confirmations on Python 3.11, 3.13, and 3.14 after every push to `main` and for every pull request.
 
 ## Project layout
 

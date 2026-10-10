@@ -58,3 +58,13 @@ jobs:
         env:
           MPLBACKEND: Agg
         run: python subprojects/ou-inference-study/run.py --config subprojects/ou-inference-study/confirmation.json --output /tmp/ou-confirmation
+
+      - name: Reproduce stationary finite-sample calibration
+        env:
+          MPLBACKEND: Agg
+        run: python subprojects/ou-inference-study/finite-sample/run.py --output /tmp/ou-finite-sample
+
+      - name: Reproduce independent stationary rank confirmation
+        env:
+          MPLBACKEND: Agg
+        run: python subprojects/ou-inference-study/finite-sample/run.py --config subprojects/ou-inference-study/finite-sample/confirmation.json --output /tmp/ou-finite-confirmation

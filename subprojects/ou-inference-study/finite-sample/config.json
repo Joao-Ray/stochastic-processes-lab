@@ -1,0 +1,18 @@
+{
+  "data_seed": 20261010,
+  "mc_seed": 20261014,
+  "replications": 2000,
+  "simulations": 399,
+  "alpha": 0.05,
+  "resolution": 0.04,
+  "u_max": 5.0,
+  "examples": true,
+  "scenarios": [
+    {"r": 2.0, "a": 0.5, "noise_sd": 0.0, "start": "stationary"},
+    {"r": 2.0, "a": 0.1, "noise_sd": 0.0, "start": "stationary"},
+    {"r": 10.0, "a": 0.1, "noise_sd": 0.0, "start": "stationary"},
+    {"r": 30.0, "a": 0.1, "noise_sd": 0.0, "start": "stationary"},
+    {"r": 10.0, "a": 0.1, "noise_sd": 0.5, "start": "stationary"},
+    {"r": 10.0, "a": 0.1, "noise_sd": 0.0, "start": "fixed5"}
+  ]
+}
