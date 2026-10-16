@@ -131,9 +131,24 @@ not cover measurement noise or fixed initial states. Existing theory is credited
 [Independent confirmation](subprojects/ou-inference-study/finite-sample/results/confirmation/report.md) ·
 [Manuscript supplement](subprojects/ou-inference-study/paper/FINITE_SAMPLE_SUPPLEMENT.md)
 
+The [unknown-measurement-error study](subprojects/ou-inference-study/measurement-error/README.md)
+adds exact joint Gaussian likelihood and REML, equal-budget repeated readings,
+Fisher-information calculations and weak-signal limits. It archives **9,000
+final inference attempts**, including 2,000 independent confirmation records.
+At noise SD 1, confirmation gives REML all-attempt profile membership **95.7%
+and 94.6%** for one and two readings per time, while ML gives **93.0% and
+91.4%**. The approximate intervals, boundary failures and untrimmed error tails
+are retained. Correct noise modeling does not supply a uniform coverage guarantee.
+
+[Noisy-model working paper](subprojects/ou-inference-study/paper/MEASUREMENT_ERROR_SUPPLEMENT.md) ·
+[Main report](subprojects/ou-inference-study/measurement-error/results/main/report.md) ·
+[Submission-readiness review](subprojects/ou-inference-study/SUBMISSION_READINESS_ZH.md)
+
 ```bash
 python subprojects/ou-inference-study/run.py
 python subprojects/ou-inference-study/finite-sample/run.py
+python subprojects/ou-inference-study/measurement-error/run.py
+python subprojects/ou-inference-study/measurement-error/tail_analysis.py
 ```
 
 ## Reproduce the experiments
@@ -176,7 +191,7 @@ Omit the notebook argument to execute all six notebooks. Execution regenerates t
 
 Fixed random seeds reproduce the reported runs. Small changes to a seed produce different individual samples while preserving the theoretical comparisons at a sufficiently large scale.
 
-GitHub Actions runs the unit tests, executes the supplementary notebook, reproduces OU calibration and its theoretical verification, and executes the full OU uncertainty benchmark, stationary finite-sample extension, and their independent confirmations on Python 3.11, 3.13, and 3.14 after every push to `main` and for every pull request.
+GitHub Actions runs the unit tests, executes the supplementary notebook, reproduces OU calibration and its theoretical verification, and executes the full OU uncertainty benchmark, stationary finite-sample extension, unknown-noise study, their independent confirmations and tail audits on Python 3.11, 3.13, and 3.14 after every push to `main` and for every pull request.
 
 ## Project layout
 

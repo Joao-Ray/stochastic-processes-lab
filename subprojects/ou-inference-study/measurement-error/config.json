@@ -1,0 +1,26 @@
+{
+  "seed": 20261015,
+  "replications": 500,
+  "budget": 200,
+  "theta": 1.0,
+  "mu": 0.0,
+  "stationary_variance": 1.0,
+  "level": 0.95,
+  "audit_records_per_scenario": 2,
+  "scenarios": [
+    {"duration": 10.0, "repeats": 1, "noise_sd": 0.5, "stress": "none"},
+    {"duration": 10.0, "repeats": 2, "noise_sd": 0.5, "stress": "none"},
+    {"duration": 10.0, "repeats": 4, "noise_sd": 0.5, "stress": "none"},
+    {"duration": 10.0, "repeats": 1, "noise_sd": 1.0, "stress": "none"},
+    {"duration": 10.0, "repeats": 2, "noise_sd": 1.0, "stress": "none"},
+    {"duration": 10.0, "repeats": 4, "noise_sd": 1.0, "stress": "none"},
+    {"duration": 10.0, "repeats": 1, "noise_sd": 2.0, "stress": "none"},
+    {"duration": 10.0, "repeats": 2, "noise_sd": 2.0, "stress": "none"},
+    {"duration": 10.0, "repeats": 4, "noise_sd": 2.0, "stress": "none"},
+    {"duration": 2.0, "repeats": 1, "noise_sd": 0.5, "stress": "none"},
+    {"duration": 30.0, "repeats": 1, "noise_sd": 0.5, "stress": "none"},
+    {"duration": 10.0, "repeats": 1, "noise_sd": 0.0, "stress": "none"},
+    {"duration": 10.0, "repeats": 1, "noise_sd": 0.5, "stress": "colored"},
+    {"duration": 10.0, "repeats": 1, "noise_sd": 0.5, "stress": "fixed5"}
+  ]
+}

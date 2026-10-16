@@ -59,3 +59,20 @@ A broader proposed method would need a precisely stated claim, a proof or contro
 error bound under explicit assumptions, and independent comparisons against
 the strongest relevant published methods. The stationary envelope addresses
 a restricted noise-free case; the broader noise-aware claim is not established.
+
+## Measurement-error extension: additional primary sources (2026-10-15)
+
+| Source | Inspected material | Consequence for contribution claims |
+| --- | --- | --- |
+| Chen, Simpson & Ying (2000), [journal PDF](https://www3.stat.sinica.edu.tw/statistica/oldpdf/A10n17.pdf), Statistica Sinica 10, 141–156 | Full paper, especially its Gaussian covariance law and infill estimands | OU plus independent white noise is established. Its fixed-domain identifiable product is V*theta; its results do not imply consistency of unknown drift and V separately. The PDF corrects an author-name error on the journal HTML abstract page. |
+| Holý & Tomanová, [arXiv:1811.09312](https://arxiv.org/html/1811.09312) (inspected v4, 2025) | Full available text, covariance moments and ARMA/likelihood discussion | Noise correction and an ARMA representation are existing work. This repository uses the full joint covariance density, verified by filtering, and does not claim to reproduce every estimator/experiment in that paper. |
+| Patterson & Thompson (1971), [DOI](https://doi.org/10.1093/biomet/58.3.545) | Primary journal bibliographic record; original article text not accessed here | REML is credited as an established variance-component approach. The implemented Gaussian derivation is supplied and checked independently; it is not a new estimator principle. |
+| Li, Kenney & Gu (2026), [arXiv:2605.01262](https://arxiv.org/html/2605.01262) | Full available preprint text, stationary Kalman likelihood and identifiability sections | Noisy OU state-space models, multivariate identifiability and SST applications already exist. Our scalar fixed-budget benchmark neither reproduces nor supersedes their factor-model study. |
+| Li (2025), [Dalhousie thesis](https://dalspaceb.library.dal.ca/server/api/core/bitstreams/f987142c-dea0-4883-a2be-1c1e99e61ce9/content), *On Ornstein-Uhlenbeck State Space Models* | Institutional metadata and search-indexed text identify sampling/replication work; full PDF retrieval failed in this session | This is a close priority-check lead. Replication under noisy OU must not be presented as a newly discovered topic. Full chapter comparison remains required. |
+
+The [new derivations](measurement-error/THEORY.md) use Gaussian likelihood,
+within-site contrasts, a Fisher-information Schur complement and KL/TV
+two-point arguments. Those tools are standard. A selected literature search
+still cannot certify a novel theorem, algorithm or sampling design. The
+[submission-readiness review](SUBMISSION_READINESS_ZH.md) records remaining
+contribution and external-review gaps.

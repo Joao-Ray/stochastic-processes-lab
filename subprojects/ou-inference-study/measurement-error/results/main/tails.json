@@ -1,0 +1,1981 @@
+{
+  "archive_sha256": "4112bb57ae1e6374405ff64edac3ea4296d5b2d8cf5db898041b10e4176a6c38",
+  "source_sha256": "11cf1a15496e3f6ba2b145894d4105d3b5a2cb0b4b8a28fc9c75af60b5bc62b8",
+  "scenarios": [
+    {
+      "id": "T=10,k=1,eta=0.5,stress=none",
+      "methods": {
+        "conditional": {
+          "available": 500,
+          "median_absolute_error": 5.948176224460309,
+          "q99_absolute_error": 15.461724836240858,
+          "max_absolute_error": 18.76089942553477,
+          "top_five_squared_error_share": 0.05969509359016881,
+          "largest_records": [
+            {
+              "replication": 357,
+              "theta": 19.76089942553477,
+              "absolute_error": 18.76089942553477
+            },
+            {
+              "replication": 180,
+              "theta": 19.189828976837525,
+              "absolute_error": 18.189828976837525
+            },
+            {
+              "replication": 321,
+              "theta": 18.196910009401126,
+              "absolute_error": 17.196910009401126
+            },
+            {
+              "replication": 465,
+              "theta": 17.58896520993845,
+              "absolute_error": 16.58896520993845
+            },
+            {
+              "replication": 350,
+              "theta": 16.61944326294093,
+              "absolute_error": 15.61944326294093
+            }
+          ]
+        },
+        "stationary_ignorant": {
+          "available": 495,
+          "median_absolute_error": 5.977658915507681,
+          "q99_absolute_error": 15.022076863490057,
+          "max_absolute_error": 18.8575337794731,
+          "top_five_squared_error_share": 0.060273042139384794,
+          "largest_records": [
+            {
+              "replication": 357,
+              "theta": 19.8575337794731,
+              "absolute_error": 18.8575337794731
+            },
+            {
+              "replication": 180,
+              "theta": 18.944281574779694,
+              "absolute_error": 17.944281574779694
+            },
+            {
+              "replication": 321,
+              "theta": 18.275417558972478,
+              "absolute_error": 17.275417558972478
+            },
+            {
+              "replication": 465,
+              "theta": 17.67233389154499,
+              "absolute_error": 16.67233389154499
+            },
+            {
+              "replication": 350,
+              "theta": 16.647717008523678,
+              "absolute_error": 15.647717008523678
+            }
+          ]
+        },
+        "ml": {
+          "available": 498,
+          "median_absolute_error": 0.4613541917363585,
+          "q99_absolute_error": 3.7901571496237407,
+          "max_absolute_error": 5.597422585247334,
+          "top_five_squared_error_share": 0.2268437305917639,
+          "largest_records": [
+            {
+              "replication": 91,
+              "theta": 6.597422585247334,
+              "absolute_error": 5.597422585247334
+            },
+            {
+              "replication": 174,
+              "theta": 6.161664223804062,
+              "absolute_error": 5.161664223804062
+            },
+            {
+              "replication": 357,
+              "theta": 5.832038470483914,
+              "absolute_error": 4.832038470483914
+            },
+            {
+              "replication": 96,
+              "theta": 5.542004269732731,
+              "absolute_error": 4.542004269732731
+            },
+            {
+              "replication": 321,
+              "theta": 5.258790658539748,
+              "absolute_error": 4.258790658539748
+            }
+          ]
+        },
+        "reml": {
+          "available": 490,
+          "median_absolute_error": 0.4336563330837605,
+          "q99_absolute_error": 3.4559545612104614,
+          "max_absolute_error": 5.1554322602691425,
+          "top_five_squared_error_share": 0.2543770413840811,
+          "largest_records": [
+            {
+              "replication": 91,
+              "theta": 6.1554322602691425,
+              "absolute_error": 5.1554322602691425
+            },
+            {
+              "replication": 174,
+              "theta": 5.600260051506662,
+              "absolute_error": 4.600260051506662
+            },
+            {
+              "replication": 357,
+              "theta": 5.345505294099714,
+              "absolute_error": 4.345505294099714
+            },
+            {
+              "replication": 96,
+              "theta": 5.155905909932704,
+              "absolute_error": 4.155905909932704
+            },
+            {
+              "replication": 321,
+              "theta": 4.800857903466192,
+              "absolute_error": 3.8008579034661922
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "T=10,k=2,eta=0.5,stress=none",
+      "methods": {
+        "conditional": {
+          "available": 500,
+          "median_absolute_error": 1.8908149708574595,
+          "q99_absolute_error": 6.298288999813992,
+          "max_absolute_error": 9.746534267756697,
+          "top_five_squared_error_share": 0.10623196962644603,
+          "largest_records": [
+            {
+              "replication": 354,
+              "theta": 10.746534267756697,
+              "absolute_error": 9.746534267756697
+            },
+            {
+              "replication": 70,
+              "theta": 9.998559844263275,
+              "absolute_error": 8.998559844263275
+            },
+            {
+              "replication": 250,
+              "theta": 8.737725931919657,
+              "absolute_error": 7.737725931919657
+            },
+            {
+              "replication": 35,
+              "theta": 8.322686249886802,
+              "absolute_error": 7.322686249886802
+            },
+            {
+              "replication": 82,
+              "theta": 7.8746777451878085,
+              "absolute_error": 6.8746777451878085
+            }
+          ]
+        },
+        "stationary_ignorant": {
+          "available": 496,
+          "median_absolute_error": 1.8528738690605155,
+          "q99_absolute_error": 6.37601192915728,
+          "max_absolute_error": 9.847221627655145,
+          "top_five_squared_error_share": 0.10481200027451727,
+          "largest_records": [
+            {
+              "replication": 354,
+              "theta": 10.847221627655145,
+              "absolute_error": 9.847221627655145
+            },
+            {
+              "replication": 70,
+              "theta": 9.976349502544018,
+              "absolute_error": 8.976349502544018
+            },
+            {
+              "replication": 35,
+              "theta": 8.14057841271695,
+              "absolute_error": 7.14057841271695
+            },
+            {
+              "replication": 250,
+              "theta": 7.98986705684068,
+              "absolute_error": 6.98986705684068
+            },
+            {
+              "replication": 82,
+              "theta": 7.976211890578294,
+              "absolute_error": 6.976211890578294
+            }
+          ]
+        },
+        "ml": {
+          "available": 499,
+          "median_absolute_error": 0.4707612822172276,
+          "q99_absolute_error": 2.7888737328804827,
+          "max_absolute_error": 5.081253386789121,
+          "top_five_squared_error_share": 0.19410479756530047,
+          "largest_records": [
+            {
+              "replication": 354,
+              "theta": 6.081253386789121,
+              "absolute_error": 5.081253386789121
+            },
+            {
+              "replication": 250,
+              "theta": 5.794775875122756,
+              "absolute_error": 4.794775875122756
+            },
+            {
+              "replication": 70,
+              "theta": 4.9049097136246385,
+              "absolute_error": 3.9049097136246385
+            },
+            {
+              "replication": 35,
+              "theta": 4.743820289584186,
+              "absolute_error": 3.7438202895841863
+            },
+            {
+              "replication": 64,
+              "theta": 3.921701714667934,
+              "absolute_error": 2.921701714667934
+            }
+          ]
+        },
+        "reml": {
+          "available": 497,
+          "median_absolute_error": 0.427905725458698,
+          "q99_absolute_error": 2.4982216642561337,
+          "max_absolute_error": 4.639956038247867,
+          "top_five_squared_error_share": 0.2202561693588736,
+          "largest_records": [
+            {
+              "replication": 354,
+              "theta": 5.639956038247867,
+              "absolute_error": 4.639956038247867
+            },
+            {
+              "replication": 250,
+              "theta": 5.403588611590582,
+              "absolute_error": 4.403588611590582
+            },
+            {
+              "replication": 70,
+              "theta": 4.501022599533632,
+              "absolute_error": 3.5010225995336324
+            },
+            {
+              "replication": 35,
+              "theta": 4.351635854006046,
+              "absolute_error": 3.3516358540060462
+            },
+            {
+              "replication": 64,
+              "theta": 3.6346732607499903,
+              "absolute_error": 2.6346732607499903
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "T=10,k=4,eta=0.5,stress=none",
+      "methods": {
+        "conditional": {
+          "available": 500,
+          "median_absolute_error": 0.7370759807611896,
+          "q99_absolute_error": 4.263584695704109,
+          "max_absolute_error": 5.9837238234587025,
+          "top_five_squared_error_share": 0.1529688186855119,
+          "largest_records": [
+            {
+              "replication": 459,
+              "theta": 6.9837238234587025,
+              "absolute_error": 5.9837238234587025
+            },
+            {
+              "replication": 401,
+              "theta": 6.5704810633060795,
+              "absolute_error": 5.5704810633060795
+            },
+            {
+              "replication": 428,
+              "theta": 5.93442179408941,
+              "absolute_error": 4.93442179408941
+            },
+            {
+              "replication": 486,
+              "theta": 5.603036024610679,
+              "absolute_error": 4.603036024610679
+            },
+            {
+              "replication": 377,
+              "theta": 5.45097786624274,
+              "absolute_error": 4.45097786624274
+            }
+          ]
+        },
+        "stationary_ignorant": {
+          "available": 498,
+          "median_absolute_error": 0.71282026376506,
+          "q99_absolute_error": 4.353984023029863,
+          "max_absolute_error": 5.8644653034177665,
+          "top_five_squared_error_share": 0.1552374807734898,
+          "largest_records": [
+            {
+              "replication": 459,
+              "theta": 6.8644653034177665,
+              "absolute_error": 5.8644653034177665
+            },
+            {
+              "replication": 401,
+              "theta": 6.649484069021246,
+              "absolute_error": 5.649484069021246
+            },
+            {
+              "replication": 428,
+              "theta": 6.020787741333446,
+              "absolute_error": 5.020787741333446
+            },
+            {
+              "replication": 486,
+              "theta": 5.6588305263056125,
+              "absolute_error": 4.6588305263056125
+            },
+            {
+              "replication": 377,
+              "theta": 5.42203692149775,
+              "absolute_error": 4.42203692149775
+            }
+          ]
+        },
+        "ml": {
+          "available": 499,
+          "median_absolute_error": 0.41166572018704506,
+          "q99_absolute_error": 3.459450235646379,
+          "max_absolute_error": 4.695425266861455,
+          "top_five_squared_error_share": 0.19336148534298103,
+          "largest_records": [
+            {
+              "replication": 459,
+              "theta": 5.695425266861455,
+              "absolute_error": 4.695425266861455
+            },
+            {
+              "replication": 401,
+              "theta": 5.368979719401037,
+              "absolute_error": 4.368979719401037
+            },
+            {
+              "replication": 428,
+              "theta": 5.33685500670025,
+              "absolute_error": 4.33685500670025
+            },
+            {
+              "replication": 377,
+              "theta": 4.942969588882271,
+              "absolute_error": 3.9429695888822707
+            },
+            {
+              "replication": 184,
+              "theta": 4.627405424387794,
+              "absolute_error": 3.627405424387794
+            }
+          ]
+        },
+        "reml": {
+          "available": 496,
+          "median_absolute_error": 0.40148235003287014,
+          "q99_absolute_error": 3.0608106809593494,
+          "max_absolute_error": 4.1674082660805665,
+          "top_five_squared_error_share": 0.21399520070978953,
+          "largest_records": [
+            {
+              "replication": 459,
+              "theta": 5.1674082660805665,
+              "absolute_error": 4.1674082660805665
+            },
+            {
+              "replication": 428,
+              "theta": 4.887493953682904,
+              "absolute_error": 3.8874939536829043
+            },
+            {
+              "replication": 401,
+              "theta": 4.886217376297194,
+              "absolute_error": 3.8862173762971937
+            },
+            {
+              "replication": 377,
+              "theta": 4.523066535995152,
+              "absolute_error": 3.5230665359951523
+            },
+            {
+              "replication": 184,
+              "theta": 4.2300673332050005,
+              "absolute_error": 3.2300673332050005
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "T=10,k=1,eta=1,stress=none",
+      "methods": {
+        "conditional": {
+          "available": 500,
+          "median_absolute_error": 17.03467093054553,
+          "q99_absolute_error": 37.894379970625266,
+          "max_absolute_error": 77.75696763260919,
+          "top_five_squared_error_share": 0.07373479975820468,
+          "largest_records": [
+            {
+              "replication": 422,
+              "theta": 78.75696763260919,
+              "absolute_error": 77.75696763260919
+            },
+            {
+              "replication": 2,
+              "theta": 52.90641538120677,
+              "absolute_error": 51.90641538120677
+            },
+            {
+              "replication": 285,
+              "theta": 46.479228221494594,
+              "absolute_error": 45.479228221494594
+            },
+            {
+              "replication": 230,
+              "theta": 39.9990112829641,
+              "absolute_error": 38.9990112829641
+            },
+            {
+              "replication": 266,
+              "theta": 39.849047126283466,
+              "absolute_error": 38.849047126283466
+            }
+          ]
+        },
+        "stationary_ignorant": {
+          "available": 499,
+          "median_absolute_error": 17.067580510506563,
+          "q99_absolute_error": 37.861793761842215,
+          "max_absolute_error": 77.85025355633245,
+          "top_five_squared_error_share": 0.07397530280359049,
+          "largest_records": [
+            {
+              "replication": 422,
+              "theta": 78.85025355633245,
+              "absolute_error": 77.85025355633245
+            },
+            {
+              "replication": 2,
+              "theta": 52.98626656216879,
+              "absolute_error": 51.98626656216879
+            },
+            {
+              "replication": 285,
+              "theta": 46.4476229952719,
+              "absolute_error": 45.4476229952719
+            },
+            {
+              "replication": 230,
+              "theta": 40.07818962947114,
+              "absolute_error": 39.07818962947114
+            },
+            {
+              "replication": 266,
+              "theta": 39.677723019044045,
+              "absolute_error": 38.677723019044045
+            }
+          ]
+        },
+        "ml": {
+          "available": 498,
+          "median_absolute_error": 0.5339187687219225,
+          "q99_absolute_error": 5.115442893333044,
+          "max_absolute_error": 9.785153015054265,
+          "top_five_squared_error_share": 0.27078406302279273,
+          "largest_records": [
+            {
+              "replication": 15,
+              "theta": 10.785153015054265,
+              "absolute_error": 9.785153015054265
+            },
+            {
+              "replication": 262,
+              "theta": 8.949517065672639,
+              "absolute_error": 7.949517065672639
+            },
+            {
+              "replication": 429,
+              "theta": 8.769123936288585,
+              "absolute_error": 7.769123936288585
+            },
+            {
+              "replication": 491,
+              "theta": 7.216373411789939,
+              "absolute_error": 6.216373411789939
+            },
+            {
+              "replication": 217,
+              "theta": 6.4190144815203976,
+              "absolute_error": 5.4190144815203976
+            }
+          ]
+        },
+        "reml": {
+          "available": 487,
+          "median_absolute_error": 0.4709106271760155,
+          "q99_absolute_error": 4.531773959246487,
+          "max_absolute_error": 8.824262393395662,
+          "top_five_squared_error_share": 0.3078732497234597,
+          "largest_records": [
+            {
+              "replication": 15,
+              "theta": 9.824262393395662,
+              "absolute_error": 8.824262393395662
+            },
+            {
+              "replication": 262,
+              "theta": 8.200805739794038,
+              "absolute_error": 7.200805739794038
+            },
+            {
+              "replication": 429,
+              "theta": 7.736826366564071,
+              "absolute_error": 6.736826366564071
+            },
+            {
+              "replication": 491,
+              "theta": 6.3540191513399025,
+              "absolute_error": 5.3540191513399025
+            },
+            {
+              "replication": 217,
+              "theta": 5.881426081898811,
+              "absolute_error": 4.881426081898811
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "T=10,k=2,eta=1,stress=none",
+      "methods": {
+        "conditional": {
+          "available": 500,
+          "median_absolute_error": 5.090588969377922,
+          "q99_absolute_error": 15.355759071248015,
+          "max_absolute_error": 19.005909624544937,
+          "top_five_squared_error_share": 0.07617042667001393,
+          "largest_records": [
+            {
+              "replication": 346,
+              "theta": 20.005909624544937,
+              "absolute_error": 19.005909624544937
+            },
+            {
+              "replication": 244,
+              "theta": 18.586445137663997,
+              "absolute_error": 17.586445137663997
+            },
+            {
+              "replication": 451,
+              "theta": 18.01898211029915,
+              "absolute_error": 17.01898211029915
+            },
+            {
+              "replication": 450,
+              "theta": 17.836227078273023,
+              "absolute_error": 16.836227078273023
+            },
+            {
+              "replication": 390,
+              "theta": 17.076103380880365,
+              "absolute_error": 16.076103380880365
+            }
+          ]
+        },
+        "stationary_ignorant": {
+          "available": 498,
+          "median_absolute_error": 5.132331989590638,
+          "q99_absolute_error": 15.451494204898479,
+          "max_absolute_error": 19.104391534397127,
+          "top_five_squared_error_share": 0.07620312864452623,
+          "largest_records": [
+            {
+              "replication": 346,
+              "theta": 20.104391534397127,
+              "absolute_error": 19.104391534397127
+            },
+            {
+              "replication": 244,
+              "theta": 18.671208890787423,
+              "absolute_error": 17.671208890787423
+            },
+            {
+              "replication": 450,
+              "theta": 17.91973720221884,
+              "absolute_error": 16.91973720221884
+            },
+            {
+              "replication": 451,
+              "theta": 17.74918707786113,
+              "absolute_error": 16.74918707786113
+            },
+            {
+              "replication": 390,
+              "theta": 16.813741139970677,
+              "absolute_error": 15.813741139970677
+            }
+          ]
+        },
+        "ml": {
+          "available": 500,
+          "median_absolute_error": 0.4701085927350493,
+          "q99_absolute_error": 5.610008543533014,
+          "max_absolute_error": 11.282785505382991,
+          "top_five_squared_error_share": 0.30902067519381626,
+          "largest_records": [
+            {
+              "replication": 346,
+              "theta": 12.282785505382991,
+              "absolute_error": 11.282785505382991
+            },
+            {
+              "replication": 451,
+              "theta": 10.16930643583305,
+              "absolute_error": 9.16930643583305
+            },
+            {
+              "replication": 167,
+              "theta": 7.855315980987385,
+              "absolute_error": 6.855315980987385
+            },
+            {
+              "replication": 450,
+              "theta": 7.09061320948951,
+              "absolute_error": 6.09061320948951
+            },
+            {
+              "replication": 38,
+              "theta": 7.044777603104351,
+              "absolute_error": 6.044777603104351
+            }
+          ]
+        },
+        "reml": {
+          "available": 492,
+          "median_absolute_error": 0.514757360594519,
+          "q99_absolute_error": 5.00949907939679,
+          "max_absolute_error": 10.3604353884441,
+          "top_five_squared_error_share": 0.3424227512534132,
+          "largest_records": [
+            {
+              "replication": 346,
+              "theta": 11.3604353884441,
+              "absolute_error": 10.3604353884441
+            },
+            {
+              "replication": 451,
+              "theta": 9.296650261202,
+              "absolute_error": 8.296650261202
+            },
+            {
+              "replication": 167,
+              "theta": 7.167078263179457,
+              "absolute_error": 6.167078263179457
+            },
+            {
+              "replication": 38,
+              "theta": 6.625543242482097,
+              "absolute_error": 5.625543242482097
+            },
+            {
+              "replication": 450,
+              "theta": 6.296050636119303,
+              "absolute_error": 5.296050636119303
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "T=10,k=4,eta=1,stress=none",
+      "methods": {
+        "conditional": {
+          "available": 499,
+          "median_absolute_error": 1.646556931578174,
+          "q99_absolute_error": 8.807090457525733,
+          "max_absolute_error": 10.382854034436047,
+          "top_five_squared_error_share": 0.13101206280884492,
+          "largest_records": [
+            {
+              "replication": 438,
+              "theta": 11.382854034436047,
+              "absolute_error": 10.382854034436047
+            },
+            {
+              "replication": 92,
+              "theta": 10.69259944978552,
+              "absolute_error": 9.69259944978552
+            },
+            {
+              "replication": 319,
+              "theta": 10.463753361778735,
+              "absolute_error": 9.463753361778735
+            },
+            {
+              "replication": 173,
+              "theta": 10.3342682452242,
+              "absolute_error": 9.3342682452242
+            },
+            {
+              "replication": 224,
+              "theta": 9.957143723749649,
+              "absolute_error": 8.957143723749649
+            }
+          ]
+        },
+        "stationary_ignorant": {
+          "available": 495,
+          "median_absolute_error": 1.6288736090923428,
+          "q99_absolute_error": 8.825388998221081,
+          "max_absolute_error": 10.478648306083286,
+          "top_five_squared_error_share": 0.13568332929844043,
+          "largest_records": [
+            {
+              "replication": 438,
+              "theta": 11.478648306083286,
+              "absolute_error": 10.478648306083286
+            },
+            {
+              "replication": 92,
+              "theta": 10.493172595758855,
+              "absolute_error": 9.493172595758855
+            },
+            {
+              "replication": 319,
+              "theta": 10.449808159421158,
+              "absolute_error": 9.449808159421158
+            },
+            {
+              "replication": 173,
+              "theta": 10.277992327671585,
+              "absolute_error": 9.277992327671585
+            },
+            {
+              "replication": 224,
+              "theta": 10.073500715556083,
+              "absolute_error": 9.073500715556083
+            }
+          ]
+        },
+        "ml": {
+          "available": 499,
+          "median_absolute_error": 0.4600572330996653,
+          "q99_absolute_error": 5.718134301369627,
+          "max_absolute_error": 7.68410184530471,
+          "top_five_squared_error_share": 0.23120806554251755,
+          "largest_records": [
+            {
+              "replication": 92,
+              "theta": 8.68410184530471,
+              "absolute_error": 7.68410184530471
+            },
+            {
+              "replication": 319,
+              "theta": 8.054831199723347,
+              "absolute_error": 7.054831199723347
+            },
+            {
+              "replication": 435,
+              "theta": 7.151465027091863,
+              "absolute_error": 6.151465027091863
+            },
+            {
+              "replication": 224,
+              "theta": 7.083707567854343,
+              "absolute_error": 6.083707567854343
+            },
+            {
+              "replication": 173,
+              "theta": 6.999926638187821,
+              "absolute_error": 5.999926638187821
+            }
+          ]
+        },
+        "reml": {
+          "available": 487,
+          "median_absolute_error": 0.4528839959194799,
+          "q99_absolute_error": 4.999324986743179,
+          "max_absolute_error": 18.804988247496944,
+          "top_five_squared_error_share": 0.48221890643111,
+          "largest_records": [
+            {
+              "replication": 201,
+              "theta": 19.804988247496944,
+              "absolute_error": 18.804988247496944
+            },
+            {
+              "replication": 92,
+              "theta": 7.6882622273706165,
+              "absolute_error": 6.6882622273706165
+            },
+            {
+              "replication": 319,
+              "theta": 7.1024480386126605,
+              "absolute_error": 6.1024480386126605
+            },
+            {
+              "replication": 435,
+              "theta": 6.332479504570717,
+              "absolute_error": 5.332479504570717
+            },
+            {
+              "replication": 224,
+              "theta": 6.043387263774452,
+              "absolute_error": 5.043387263774452
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "T=10,k=1,eta=2,stress=none",
+      "methods": {
+        "conditional": {
+          "available": 487,
+          "median_absolute_error": 34.9709163319954,
+          "q99_absolute_error": 84.44200630584739,
+          "max_absolute_error": 164.70111249690956,
+          "top_five_squared_error_share": 0.07487206824214872,
+          "largest_records": [
+            {
+              "replication": 165,
+              "theta": 165.70111249690956,
+              "absolute_error": 164.70111249690956
+            },
+            {
+              "replication": 431,
+              "theta": 108.1007099247823,
+              "absolute_error": 107.1007099247823
+            },
+            {
+              "replication": 193,
+              "theta": 103.0379942361472,
+              "absolute_error": 102.0379942361472
+            },
+            {
+              "replication": 496,
+              "theta": 88.96662598428182,
+              "absolute_error": 87.96662598428182
+            },
+            {
+              "replication": 189,
+              "theta": 86.7129317012099,
+              "absolute_error": 85.7129317012099
+            }
+          ]
+        },
+        "stationary_ignorant": {
+          "available": 484,
+          "median_absolute_error": 34.84192152141153,
+          "q99_absolute_error": 82.14119151501335,
+          "max_absolute_error": 162.37056927160157,
+          "top_five_squared_error_share": 0.07058893022927593,
+          "largest_records": [
+            {
+              "replication": 165,
+              "theta": 163.37056927160157,
+              "absolute_error": 162.37056927160157
+            },
+            {
+              "replication": 193,
+              "theta": 103.13086135569678,
+              "absolute_error": 102.13086135569678
+            },
+            {
+              "replication": 496,
+              "theta": 89.03388619718355,
+              "absolute_error": 88.03388619718355
+            },
+            {
+              "replication": 189,
+              "theta": 86.82550515094962,
+              "absolute_error": 85.82550515094962
+            },
+            {
+              "replication": 436,
+              "theta": 85.24874095313302,
+              "absolute_error": 84.24874095313302
+            }
+          ]
+        },
+        "ml": {
+          "available": 499,
+          "median_absolute_error": 0.8607451656561431,
+          "q99_absolute_error": 45.19821345576537,
+          "max_absolute_error": 63.516421675197435,
+          "top_five_squared_error_share": 0.40932855527112155,
+          "largest_records": [
+            {
+              "replication": 312,
+              "theta": 64.51642167519744,
+              "absolute_error": 63.516421675197435
+            },
+            {
+              "replication": 336,
+              "theta": 62.83970103276508,
+              "absolute_error": 61.83970103276508
+            },
+            {
+              "replication": 129,
+              "theta": 56.11289818811026,
+              "absolute_error": 55.11289818811026
+            },
+            {
+              "replication": 133,
+              "theta": 51.5249180595958,
+              "absolute_error": 50.5249180595958
+            },
+            {
+              "replication": 414,
+              "theta": 48.803488717706145,
+              "absolute_error": 47.803488717706145
+            }
+          ]
+        },
+        "reml": {
+          "available": 477,
+          "median_absolute_error": 0.7009642301934967,
+          "q99_absolute_error": 36.01880826961924,
+          "max_absolute_error": 61.026897460030874,
+          "top_five_squared_error_share": 0.5503502483949101,
+          "largest_records": [
+            {
+              "replication": 312,
+              "theta": 62.026897460030874,
+              "absolute_error": 61.026897460030874
+            },
+            {
+              "replication": 336,
+              "theta": 60.52246075666307,
+              "absolute_error": 59.52246075666307
+            },
+            {
+              "replication": 133,
+              "theta": 50.09935747434918,
+              "absolute_error": 49.09935747434918
+            },
+            {
+              "replication": 126,
+              "theta": 45.04367702430688,
+              "absolute_error": 44.04367702430688
+            },
+            {
+              "replication": 463,
+              "theta": 40.7932078900874,
+              "absolute_error": 39.7932078900874
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "T=10,k=2,eta=2,stress=none",
+      "methods": {
+        "conditional": {
+          "available": 477,
+          "median_absolute_error": 12.822251121039491,
+          "q99_absolute_error": 40.45137263210788,
+          "max_absolute_error": 55.57999241108915,
+          "top_five_squared_error_share": 0.09364050527437176,
+          "largest_records": [
+            {
+              "replication": 200,
+              "theta": 56.57999241108915,
+              "absolute_error": 55.57999241108915
+            },
+            {
+              "replication": 14,
+              "theta": 50.59723148539728,
+              "absolute_error": 49.59723148539728
+            },
+            {
+              "replication": 380,
+              "theta": 48.67363373736847,
+              "absolute_error": 47.67363373736847
+            },
+            {
+              "replication": 225,
+              "theta": 44.58031068522005,
+              "absolute_error": 43.58031068522005
+            },
+            {
+              "replication": 436,
+              "theta": 43.59391885632336,
+              "absolute_error": 42.59391885632336
+            }
+          ]
+        },
+        "stationary_ignorant": {
+          "available": 476,
+          "median_absolute_error": 12.842728348350295,
+          "q99_absolute_error": 40.535802415194794,
+          "max_absolute_error": 55.45206289312338,
+          "top_five_squared_error_share": 0.09366092839937558,
+          "largest_records": [
+            {
+              "replication": 200,
+              "theta": 56.45206289312338,
+              "absolute_error": 55.45206289312338
+            },
+            {
+              "replication": 14,
+              "theta": 50.67664102966043,
+              "absolute_error": 49.67664102966043
+            },
+            {
+              "replication": 380,
+              "theta": 48.70837415687068,
+              "absolute_error": 47.70837415687068
+            },
+            {
+              "replication": 225,
+              "theta": 44.28096855287233,
+              "absolute_error": 43.28096855287233
+            },
+            {
+              "replication": 436,
+              "theta": 43.67990318593578,
+              "absolute_error": 42.67990318593578
+            }
+          ]
+        },
+        "ml": {
+          "available": 488,
+          "median_absolute_error": 0.6308969595670154,
+          "q99_absolute_error": 18.95196441895745,
+          "max_absolute_error": 36.27616772828528,
+          "top_five_squared_error_share": 0.47086376321146367,
+          "largest_records": [
+            {
+              "replication": 380,
+              "theta": 37.27616772828528,
+              "absolute_error": 36.27616772828528
+            },
+            {
+              "replication": 14,
+              "theta": 35.83955681282802,
+              "absolute_error": 34.83955681282802
+            },
+            {
+              "replication": 225,
+              "theta": 34.69276360676058,
+              "absolute_error": 33.69276360676058
+            },
+            {
+              "replication": 389,
+              "theta": 22.970565471412506,
+              "absolute_error": 21.970565471412506
+            },
+            {
+              "replication": 168,
+              "theta": 21.789810180452765,
+              "absolute_error": 20.789810180452765
+            }
+          ]
+        },
+        "reml": {
+          "available": 467,
+          "median_absolute_error": 0.6571024216620137,
+          "q99_absolute_error": 17.105083484796474,
+          "max_absolute_error": 27.384052662801107,
+          "top_five_squared_error_share": 0.4561390793158383,
+          "largest_records": [
+            {
+              "replication": 380,
+              "theta": 28.384052662801107,
+              "absolute_error": 27.384052662801107
+            },
+            {
+              "replication": 225,
+              "theta": 27.925645660453753,
+              "absolute_error": 26.925645660453753
+            },
+            {
+              "replication": 371,
+              "theta": 22.773940310246118,
+              "absolute_error": 21.773940310246118
+            },
+            {
+              "replication": 389,
+              "theta": 20.45841444781422,
+              "absolute_error": 19.45841444781422
+            },
+            {
+              "replication": 168,
+              "theta": 19.614083280330828,
+              "absolute_error": 18.614083280330828
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "T=10,k=4,eta=2,stress=none",
+      "methods": {
+        "conditional": {
+          "available": 480,
+          "median_absolute_error": 4.51556264984143,
+          "q99_absolute_error": 17.469245892618265,
+          "max_absolute_error": 23.33556132884094,
+          "top_five_squared_error_share": 0.09954309629765881,
+          "largest_records": [
+            {
+              "replication": 94,
+              "theta": 24.33556132884094,
+              "absolute_error": 23.33556132884094
+            },
+            {
+              "replication": 217,
+              "theta": 21.197229681793,
+              "absolute_error": 20.197229681793
+            },
+            {
+              "replication": 406,
+              "theta": 20.02602233263474,
+              "absolute_error": 19.02602233263474
+            },
+            {
+              "replication": 177,
+              "theta": 19.299988939233756,
+              "absolute_error": 18.299988939233756
+            },
+            {
+              "replication": 231,
+              "theta": 18.92033194406555,
+              "absolute_error": 17.92033194406555
+            }
+          ]
+        },
+        "stationary_ignorant": {
+          "available": 479,
+          "median_absolute_error": 4.543251990807502,
+          "q99_absolute_error": 17.57467054148452,
+          "max_absolute_error": 24.04074337651791,
+          "top_five_squared_error_share": 0.1025333856656913,
+          "largest_records": [
+            {
+              "replication": 94,
+              "theta": 25.04074337651791,
+              "absolute_error": 24.04074337651791
+            },
+            {
+              "replication": 217,
+              "theta": 21.65849054811179,
+              "absolute_error": 20.65849054811179
+            },
+            {
+              "replication": 406,
+              "theta": 20.079130386603936,
+              "absolute_error": 19.079130386603936
+            },
+            {
+              "replication": 177,
+              "theta": 19.27126787420664,
+              "absolute_error": 18.27126787420664
+            },
+            {
+              "replication": 231,
+              "theta": 19.039341036429196,
+              "absolute_error": 18.039341036429196
+            }
+          ]
+        },
+        "ml": {
+          "available": 475,
+          "median_absolute_error": 0.6424939737484849,
+          "q99_absolute_error": 10.057297011220573,
+          "max_absolute_error": 20.384556119035615,
+          "top_five_squared_error_share": 0.3368585934394013,
+          "largest_records": [
+            {
+              "replication": 94,
+              "theta": 21.384556119035615,
+              "absolute_error": 20.384556119035615
+            },
+            {
+              "replication": 302,
+              "theta": 15.219884817155732,
+              "absolute_error": 14.219884817155732
+            },
+            {
+              "replication": 231,
+              "theta": 13.391812455881123,
+              "absolute_error": 12.391812455881123
+            },
+            {
+              "replication": 225,
+              "theta": 12.408825961614385,
+              "absolute_error": 11.408825961614385
+            },
+            {
+              "replication": 399,
+              "theta": 11.678393554452027,
+              "absolute_error": 10.678393554452027
+            }
+          ]
+        },
+        "reml": {
+          "available": 451,
+          "median_absolute_error": 0.6322666585698999,
+          "q99_absolute_error": 8.460680992304262,
+          "max_absolute_error": 12.678194661274548,
+          "top_five_squared_error_share": 0.312904266076968,
+          "largest_records": [
+            {
+              "replication": 94,
+              "theta": 13.678194661274548,
+              "absolute_error": 12.678194661274548
+            },
+            {
+              "replication": 302,
+              "theta": 11.90408693825648,
+              "absolute_error": 10.90408693825648
+            },
+            {
+              "replication": 225,
+              "theta": 10.764142652822283,
+              "absolute_error": 9.764142652822283
+            },
+            {
+              "replication": 15,
+              "theta": 10.746832060718603,
+              "absolute_error": 9.746832060718603
+            },
+            {
+              "replication": 231,
+              "theta": 9.752946348679316,
+              "absolute_error": 8.752946348679316
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "T=2,k=1,eta=0.5,stress=none",
+      "methods": {
+        "conditional": {
+          "available": 500,
+          "median_absolute_error": 54.89484987156209,
+          "q99_absolute_error": 157.195769918554,
+          "max_absolute_error": 227.0045124729163,
+          "top_five_squared_error_share": 0.07705532063697418,
+          "largest_records": [
+            {
+              "replication": 168,
+              "theta": 228.0045124729163,
+              "absolute_error": 227.0045124729163
+            },
+            {
+              "replication": 155,
+              "theta": 209.28080628765846,
+              "absolute_error": 208.28080628765846
+            },
+            {
+              "replication": 225,
+              "theta": 176.12563223376458,
+              "absolute_error": 175.12563223376458
+            },
+            {
+              "replication": 498,
+              "theta": 163.42882935024085,
+              "absolute_error": 162.42882935024085
+            },
+            {
+              "replication": 15,
+              "theta": 160.79139222354218,
+              "absolute_error": 159.79139222354218
+            }
+          ]
+        },
+        "stationary_ignorant": {
+          "available": 494,
+          "median_absolute_error": 55.260982374948235,
+          "q99_absolute_error": 157.56098407325146,
+          "max_absolute_error": 227.49079922454726,
+          "top_five_squared_error_share": 0.07788651613539427,
+          "largest_records": [
+            {
+              "replication": 168,
+              "theta": 228.49079922454726,
+              "absolute_error": 227.49079922454726
+            },
+            {
+              "replication": 155,
+              "theta": 209.54763869113756,
+              "absolute_error": 208.54763869113756
+            },
+            {
+              "replication": 225,
+              "theta": 175.58411122170446,
+              "absolute_error": 174.58411122170446
+            },
+            {
+              "replication": 498,
+              "theta": 163.63545939465985,
+              "absolute_error": 162.63545939465985
+            },
+            {
+              "replication": 15,
+              "theta": 161.24045777622175,
+              "absolute_error": 160.24045777622175
+            }
+          ]
+        },
+        "ml": {
+          "available": 497,
+          "median_absolute_error": 1.9604032386419346,
+          "q99_absolute_error": 20.233461298445917,
+          "max_absolute_error": 40.54532406142327,
+          "top_five_squared_error_share": 0.3306797500234919,
+          "largest_records": [
+            {
+              "replication": 335,
+              "theta": 41.54532406142327,
+              "absolute_error": 40.54532406142327
+            },
+            {
+              "replication": 74,
+              "theta": 31.249209235783642,
+              "absolute_error": 30.249209235783642
+            },
+            {
+              "replication": 75,
+              "theta": 26.169396249915668,
+              "absolute_error": 25.169396249915668
+            },
+            {
+              "replication": 155,
+              "theta": 24.25025759346051,
+              "absolute_error": 23.25025759346051
+            },
+            {
+              "replication": 234,
+              "theta": 21.872293261649446,
+              "absolute_error": 20.872293261649446
+            }
+          ]
+        },
+        "reml": {
+          "available": 418,
+          "median_absolute_error": 1.0984939801947402,
+          "q99_absolute_error": 18.03373394307562,
+          "max_absolute_error": 37.34748930263071,
+          "top_five_squared_error_share": 0.4222288376957764,
+          "largest_records": [
+            {
+              "replication": 335,
+              "theta": 38.34748930263071,
+              "absolute_error": 37.34748930263071
+            },
+            {
+              "replication": 74,
+              "theta": 28.058619990616574,
+              "absolute_error": 27.058619990616574
+            },
+            {
+              "replication": 75,
+              "theta": 23.209322612056766,
+              "absolute_error": 22.209322612056766
+            },
+            {
+              "replication": 155,
+              "theta": 21.25726265422586,
+              "absolute_error": 20.25726265422586
+            },
+            {
+              "replication": 234,
+              "theta": 19.378799497778434,
+              "absolute_error": 18.378799497778434
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "T=30,k=1,eta=0.5,stress=none",
+      "methods": {
+        "conditional": {
+          "available": 500,
+          "median_absolute_error": 1.692911818478251,
+          "q99_absolute_error": 4.276495966117547,
+          "max_absolute_error": 5.704752161655558,
+          "top_five_squared_error_share": 0.05733748769864093,
+          "largest_records": [
+            {
+              "replication": 237,
+              "theta": 6.704752161655558,
+              "absolute_error": 5.704752161655558
+            },
+            {
+              "replication": 114,
+              "theta": 5.646379659882718,
+              "absolute_error": 4.646379659882718
+            },
+            {
+              "replication": 211,
+              "theta": 5.460601435662278,
+              "absolute_error": 4.460601435662278
+            },
+            {
+              "replication": 495,
+              "theta": 5.405403802181799,
+              "absolute_error": 4.405403802181799
+            },
+            {
+              "replication": 290,
+              "theta": 5.320943950823419,
+              "absolute_error": 4.320943950823419
+            }
+          ]
+        },
+        "stationary_ignorant": {
+          "available": 498,
+          "median_absolute_error": 1.6883021959373004,
+          "q99_absolute_error": 4.244643724476595,
+          "max_absolute_error": 5.697981360018422,
+          "top_five_squared_error_share": 0.0557753347357335,
+          "largest_records": [
+            {
+              "replication": 237,
+              "theta": 6.697981360018422,
+              "absolute_error": 5.697981360018422
+            },
+            {
+              "replication": 495,
+              "theta": 5.331106525572082,
+              "absolute_error": 4.331106525572082
+            },
+            {
+              "replication": 211,
+              "theta": 5.330239573102002,
+              "absolute_error": 4.330239573102002
+            },
+            {
+              "replication": 290,
+              "theta": 5.330209614772055,
+              "absolute_error": 4.330209614772055
+            },
+            {
+              "replication": 218,
+              "theta": 5.3026026250664495,
+              "absolute_error": 4.3026026250664495
+            }
+          ]
+        },
+        "ml": {
+          "available": 497,
+          "median_absolute_error": 0.27907947076251227,
+          "q99_absolute_error": 2.167898799592385,
+          "max_absolute_error": 3.4223528511400305,
+          "top_five_squared_error_share": 0.2077812766129666,
+          "largest_records": [
+            {
+              "replication": 218,
+              "theta": 4.4223528511400305,
+              "absolute_error": 3.4223528511400305
+            },
+            {
+              "replication": 424,
+              "theta": 3.5340005958370817,
+              "absolute_error": 2.5340005958370817
+            },
+            {
+              "replication": 69,
+              "theta": 3.4619810977566536,
+              "absolute_error": 2.4619810977566536
+            },
+            {
+              "replication": 110,
+              "theta": 3.355538910093514,
+              "absolute_error": 2.355538910093514
+            },
+            {
+              "replication": 373,
+              "theta": 3.198750905560913,
+              "absolute_error": 2.198750905560913
+            }
+          ]
+        },
+        "reml": {
+          "available": 497,
+          "median_absolute_error": 0.2677148194724739,
+          "q99_absolute_error": 1.9708200467098573,
+          "max_absolute_error": 3.2375289698813647,
+          "top_five_squared_error_share": 0.21680948417630655,
+          "largest_records": [
+            {
+              "replication": 218,
+              "theta": 4.237528969881365,
+              "absolute_error": 3.2375289698813647
+            },
+            {
+              "replication": 424,
+              "theta": 3.3362993422410385,
+              "absolute_error": 2.3362993422410385
+            },
+            {
+              "replication": 69,
+              "theta": 3.2876218799252226,
+              "absolute_error": 2.2876218799252226
+            },
+            {
+              "replication": 110,
+              "theta": 3.209966816138726,
+              "absolute_error": 2.209966816138726
+            },
+            {
+              "replication": 373,
+              "theta": 3.0011779959443263,
+              "absolute_error": 2.0011779959443263
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "T=10,k=1,eta=0,stress=none",
+      "methods": {
+        "conditional": {
+          "available": 500,
+          "median_absolute_error": 0.38016493173066973,
+          "q99_absolute_error": 2.24143333897826,
+          "max_absolute_error": 4.3172318560794185,
+          "top_five_squared_error_share": 0.1442424685298803,
+          "largest_records": [
+            {
+              "replication": 393,
+              "theta": 5.3172318560794185,
+              "absolute_error": 4.3172318560794185
+            },
+            {
+              "replication": 114,
+              "theta": 3.3963976288169118,
+              "absolute_error": 2.3963976288169118
+            },
+            {
+              "replication": 394,
+              "theta": 3.343235370184849,
+              "absolute_error": 2.343235370184849
+            },
+            {
+              "replication": 241,
+              "theta": 3.2931615962321263,
+              "absolute_error": 2.2931615962321263
+            },
+            {
+              "replication": 433,
+              "theta": 3.2705757577180825,
+              "absolute_error": 2.2705757577180825
+            }
+          ]
+        },
+        "stationary_ignorant": {
+          "available": 488,
+          "median_absolute_error": 0.3605814611854024,
+          "q99_absolute_error": 2.1967748645269887,
+          "max_absolute_error": 4.231651966193285,
+          "top_five_squared_error_share": 0.15356713644470435,
+          "largest_records": [
+            {
+              "replication": 393,
+              "theta": 5.231651966193285,
+              "absolute_error": 4.231651966193285
+            },
+            {
+              "replication": 114,
+              "theta": 3.4857699464270597,
+              "absolute_error": 2.4857699464270597
+            },
+            {
+              "replication": 433,
+              "theta": 3.3597131921793038,
+              "absolute_error": 2.3597131921793038
+            },
+            {
+              "replication": 320,
+              "theta": 3.2205419788611596,
+              "absolute_error": 2.2205419788611596
+            },
+            {
+              "replication": 394,
+              "theta": 3.212026191479983,
+              "absolute_error": 2.212026191479983
+            }
+          ]
+        },
+        "ml": {
+          "available": 497,
+          "median_absolute_error": 0.33716744782743713,
+          "q99_absolute_error": 2.134690807634953,
+          "max_absolute_error": 4.231652068316714,
+          "top_five_squared_error_share": 0.16666436569633947,
+          "largest_records": [
+            {
+              "replication": 393,
+              "theta": 5.231652068316714,
+              "absolute_error": 4.231652068316714
+            },
+            {
+              "replication": 114,
+              "theta": 3.4857700244351433,
+              "absolute_error": 2.4857700244351433
+            },
+            {
+              "replication": 320,
+              "theta": 3.220542047355509,
+              "absolute_error": 2.220542047355509
+            },
+            {
+              "replication": 241,
+              "theta": 3.1944959306144725,
+              "absolute_error": 2.1944959306144725
+            },
+            {
+              "replication": 265,
+              "theta": 3.142887232455995,
+              "absolute_error": 2.142887232455995
+            }
+          ]
+        },
+        "reml": {
+          "available": 485,
+          "median_absolute_error": 0.3261137696449513,
+          "q99_absolute_error": 1.920620866829804,
+          "max_absolute_error": 4.002133410122651,
+          "top_five_squared_error_share": 0.18307890210438207,
+          "largest_records": [
+            {
+              "replication": 393,
+              "theta": 5.002133410122651,
+              "absolute_error": 4.002133410122651
+            },
+            {
+              "replication": 114,
+              "theta": 3.2709196206811915,
+              "absolute_error": 2.2709196206811915
+            },
+            {
+              "replication": 320,
+              "theta": 3.005025325099466,
+              "absolute_error": 2.005025325099466
+            },
+            {
+              "replication": 241,
+              "theta": 2.9765969273380004,
+              "absolute_error": 1.9765969273380004
+            },
+            {
+              "replication": 84,
+              "theta": 2.9232275685793256,
+              "absolute_error": 1.9232275685793256
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "T=10,k=1,eta=0.5,stress=colored",
+      "methods": {
+        "conditional": {
+          "available": 500,
+          "median_absolute_error": 2.09095654673827,
+          "q99_absolute_error": 5.673926681717631,
+          "max_absolute_error": 6.680334147599229,
+          "top_five_squared_error_share": 0.05663078554656943,
+          "largest_records": [
+            {
+              "replication": 311,
+              "theta": 7.680334147599229,
+              "absolute_error": 6.680334147599229
+            },
+            {
+              "replication": 296,
+              "theta": 7.565134072250556,
+              "absolute_error": 6.565134072250556
+            },
+            {
+              "replication": 417,
+              "theta": 6.992618698823951,
+              "absolute_error": 5.992618698823951
+            },
+            {
+              "replication": 421,
+              "theta": 6.961651823563251,
+              "absolute_error": 5.961651823563251
+            },
+            {
+              "replication": 88,
+              "theta": 6.776409018066308,
+              "absolute_error": 5.776409018066308
+            }
+          ]
+        },
+        "stationary_ignorant": {
+          "available": 490,
+          "median_absolute_error": 2.084865833368794,
+          "q99_absolute_error": 5.71496364257307,
+          "max_absolute_error": 6.761200736822684,
+          "top_five_squared_error_share": 0.059407394332523684,
+          "largest_records": [
+            {
+              "replication": 311,
+              "theta": 7.761200736822684,
+              "absolute_error": 6.761200736822684
+            },
+            {
+              "replication": 296,
+              "theta": 7.659971277307269,
+              "absolute_error": 6.659971277307269
+            },
+            {
+              "replication": 421,
+              "theta": 7.057459695738382,
+              "absolute_error": 6.057459695738382
+            },
+            {
+              "replication": 417,
+              "theta": 6.929741794473504,
+              "absolute_error": 5.929741794473504
+            },
+            {
+              "replication": 88,
+              "theta": 6.851270170118051,
+              "absolute_error": 5.851270170118051
+            }
+          ]
+        },
+        "ml": {
+          "available": 496,
+          "median_absolute_error": 1.4654913370458187,
+          "q99_absolute_error": 5.420208983584908,
+          "max_absolute_error": 6.761200754518004,
+          "top_five_squared_error_share": 0.09101575823156748,
+          "largest_records": [
+            {
+              "replication": 311,
+              "theta": 7.761200754518004,
+              "absolute_error": 6.761200754518004
+            },
+            {
+              "replication": 296,
+              "theta": 7.659971277307272,
+              "absolute_error": 6.659971277307272
+            },
+            {
+              "replication": 88,
+              "theta": 6.851269988206126,
+              "absolute_error": 5.851269988206126
+            },
+            {
+              "replication": 64,
+              "theta": 6.600771548466633,
+              "absolute_error": 5.600771548466633
+            },
+            {
+              "replication": 341,
+              "theta": 6.429179855744491,
+              "absolute_error": 5.429179855744491
+            }
+          ]
+        },
+        "reml": {
+          "available": 499,
+          "median_absolute_error": 1.221362071016875,
+          "q99_absolute_error": 5.111796851400443,
+          "max_absolute_error": 6.517931917611894,
+          "top_five_squared_error_share": 0.10243840172586927,
+          "largest_records": [
+            {
+              "replication": 311,
+              "theta": 7.517931917611894,
+              "absolute_error": 6.517931917611894
+            },
+            {
+              "replication": 296,
+              "theta": 7.394921261968446,
+              "absolute_error": 6.394921261968446
+            },
+            {
+              "replication": 88,
+              "theta": 6.600985885530606,
+              "absolute_error": 5.600985885530606
+            },
+            {
+              "replication": 64,
+              "theta": 6.359032331874301,
+              "absolute_error": 5.359032331874301
+            },
+            {
+              "replication": 341,
+              "theta": 6.194497703302212,
+              "absolute_error": 5.194497703302212
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "T=10,k=1,eta=0.5,stress=fixed5",
+      "methods": {
+        "conditional": {
+          "available": 500,
+          "median_absolute_error": 2.7874916174213817,
+          "q99_absolute_error": 6.327951052186232,
+          "max_absolute_error": 9.57588345498945,
+          "top_five_squared_error_share": 0.06232488028540697,
+          "largest_records": [
+            {
+              "replication": 470,
+              "theta": 10.57588345498945,
+              "absolute_error": 9.57588345498945
+            },
+            {
+              "replication": 34,
+              "theta": 9.581337526208916,
+              "absolute_error": 8.581337526208916
+            },
+            {
+              "replication": 332,
+              "theta": 8.943706298705582,
+              "absolute_error": 7.943706298705582
+            },
+            {
+              "replication": 111,
+              "theta": 8.380220057366603,
+              "absolute_error": 7.3802200573666035
+            },
+            {
+              "replication": 380,
+              "theta": 7.442825644870149,
+              "absolute_error": 6.442825644870149
+            }
+          ]
+        },
+        "stationary_ignorant": {
+          "available": 492,
+          "median_absolute_error": 1.8385659146547995,
+          "q99_absolute_error": 5.041729465258457,
+          "max_absolute_error": 8.462005832070213,
+          "top_five_squared_error_share": 0.08418358535679189,
+          "largest_records": [
+            {
+              "replication": 470,
+              "theta": 9.462005832070213,
+              "absolute_error": 8.462005832070213
+            },
+            {
+              "replication": 34,
+              "theta": 7.871901861352835,
+              "absolute_error": 6.871901861352835
+            },
+            {
+              "replication": 332,
+              "theta": 7.297653024650624,
+              "absolute_error": 6.297653024650624
+            },
+            {
+              "replication": 111,
+              "theta": 6.327659256565771,
+              "absolute_error": 5.327659256565771
+            },
+            {
+              "replication": 380,
+              "theta": 6.309926299549526,
+              "absolute_error": 5.309926299549526
+            }
+          ]
+        },
+        "ml": {
+          "available": 495,
+          "median_absolute_error": 0.6884497710303887,
+          "q99_absolute_error": 0.886435169319446,
+          "max_absolute_error": 0.9052473154123846,
+          "top_five_squared_error_share": 0.017777282234972568,
+          "largest_records": [
+            {
+              "replication": 0,
+              "theta": 0.09475268458761543,
+              "absolute_error": 0.9052473154123846
+            },
+            {
+              "replication": 213,
+              "theta": 0.09703964680953149,
+              "absolute_error": 0.9029603531904685
+            },
+            {
+              "replication": 386,
+              "theta": 0.09900235204855609,
+              "absolute_error": 0.9009976479514439
+            },
+            {
+              "replication": 208,
+              "theta": 0.10747320729560852,
+              "absolute_error": 0.8925267927043915
+            },
+            {
+              "replication": 424,
+              "theta": 0.10777244257548176,
+              "absolute_error": 0.8922275574245182
+            }
+          ]
+        },
+        "reml": {
+          "available": 177,
+          "median_absolute_error": 0.9438457066076239,
+          "q99_absolute_error": 0.9985386373077829,
+          "max_absolute_error": 0.9987760094869739,
+          "top_five_squared_error_share": 0.03504783692027892,
+          "largest_records": [
+            {
+              "replication": 235,
+              "theta": 0.0012239905130261278,
+              "absolute_error": 0.9987760094869739
+            },
+            {
+              "replication": 497,
+              "theta": 0.0014050748080283292,
+              "absolute_error": 0.9985949251919717
+            },
+            {
+              "replication": 110,
+              "theta": 0.0014791378135397813,
+              "absolute_error": 0.9985208621864602
+            },
+            {
+              "replication": 415,
+              "theta": 0.0015927551261516381,
+              "absolute_error": 0.9984072448738484
+            },
+            {
+              "replication": 243,
+              "theta": 0.003582845711143073,
+              "absolute_error": 0.9964171542888569
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "definition": "Finite available point estimates only; no records trimmed or replaced. Top-five share uses squared errors within that same availability population."
+}

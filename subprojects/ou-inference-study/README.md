@@ -16,6 +16,34 @@ an original methodological contribution or readiness for a Q1 journal.
 [Working manuscript](paper/MANUSCRIPT.md) · [Literature positioning](LITERATURE.md) ·
 [中文研究说明](RESEARCH_STATUS_ZH.md)
 
+## Unknown sensor error and information limits
+
+The [measurement-error study](measurement-error/README.md) adds full joint
+stationary Gaussian ML and REML, exact within-site contrast reduction for
+repeated readings, a banded likelihood evaluator, nuisance-adjusted Fisher
+information and weak-signal KL/two-point bounds. These use established tools;
+priority for a new method is not claimed.
+
+It executes **7,000 main attempts plus 2,000 final independent confirmation
+attempts**, with unknown mean, latent variance and sensor variance. Fourteen
+main designs compare noise levels, duration, equal-budget replication and
+assumption violations. Numerical audit found and repaired a REML boundary
+search issue; the [amendment](measurement-error/AMENDMENTS.md) retains the
+initial evidence and replaces the previously viewed confirmation seed.
+
+At T=10, noise SD 1, and 200 total readings, final confirmation gives noisy
+ML all-attempt profile membership **93.0% / 91.4%** and REML **95.7% / 94.6%**
+for k=1 / k=2. These are asymptotic profile procedures, with failures counted;
+they do not establish uniform 95% coverage. Conditional estimation errors,
+their availability populations and [tail sensitivity](measurement-error/results/confirmation/tail_report.md)
+are reported separately. Replication is not a universal winner.
+
+[Full noisy-model derivations](measurement-error/THEORY.md) ·
+[Main results](measurement-error/results/main/report.md) ·
+[Final confirmation](measurement-error/results/confirmation/report.md) ·
+[Working paper](paper/MEASUREMENT_ERROR_SUPPLEMENT.md) ·
+[投稿前研究审查](SUBMISSION_READINESS_ZH.md)
+
 ## Stationary finite-sample extension
 
 The [new stage](finite-sample/README.md) calibrates an affine-invariant profile
@@ -121,7 +149,8 @@ Stationary initialization is part of this design. The likelihood is conditional
 on the observed initial state; bootstrap training paths also fix that value.
 The confirmation changes both B and seed and therefore cannot isolate their
 individual effects. The literature search is a selected positioning review,
-not a systematic review or a certification of novelty. The separate extension
-adds stationary calibration arguments and a fixed-start diagnostic; it does
-not supply noise-aware inference or a general nonstationary-start guarantee.
+not a systematic review or a certification of novelty. The rank extension
+provides stationary noise-free calibration arguments. The noisy-model study
+provides likelihood inference and initial-state/error diagnostics, but no
+uniform finite-sample noisy coverage or general nonstationary-start guarantee.
 Originality, sharper precision, and robust calibration remain open work.

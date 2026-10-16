@@ -10,6 +10,11 @@ adds nuisance-free Monte Carlo rank calibration, a conservative continuous-cell
 coverage proof, and executed main/independent confirmation results. The present
 benchmark and its fixed-X0 bootstrap construction are retained separately.
 
+**Unknown sensor error:** the [measurement-error working paper](MEASUREMENT_ERROR_SUPPLEMENT.md)
+adds full joint Gaussian ML/REML, equal-budget replication, information bounds,
+and independent confirmation. The [submission-readiness review](../SUBMISSION_READINESS_ZH.md)
+separates completed evidence from unresolved originality and calibration claims.
+
 ## Abstract
 
 We examine finite-window inference for the positive drift parameter of a scalar

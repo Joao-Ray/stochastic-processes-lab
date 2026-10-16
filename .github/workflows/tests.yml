@@ -68,3 +68,18 @@ jobs:
         env:
           MPLBACKEND: Agg
         run: python subprojects/ou-inference-study/finite-sample/run.py --config subprojects/ou-inference-study/finite-sample/confirmation.json --output /tmp/ou-finite-confirmation
+
+      - name: Reproduce unknown-noise OU benchmark
+        env:
+          MPLBACKEND: Agg
+        run: |
+          python subprojects/ou-inference-study/measurement-error/run.py --output /tmp/ou-measurement-error
+          python subprojects/ou-inference-study/measurement-error/tail_analysis.py --results /tmp/ou-measurement-error
+
+      - name: Reproduce independent unknown-noise confirmation
+        env:
+          MPLBACKEND: Agg
+        run: |
+          python subprojects/ou-inference-study/measurement-error/run.py --config subprojects/ou-inference-study/measurement-error/confirmation.json --output /tmp/ou-noise-confirmation
+          python subprojects/ou-inference-study/measurement-error/tail_analysis.py --results /tmp/ou-noise-confirmation
+          python subprojects/ou-inference-study/measurement-error/diagnose_extremes.py --results /tmp/ou-noise-confirmation

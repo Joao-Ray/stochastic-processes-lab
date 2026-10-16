@@ -1,0 +1,16 @@
+{
+  "seed": 20261015,
+  "replications": 12,
+  "budget": 40,
+  "theta": 1.0,
+  "mu": 0.0,
+  "stationary_variance": 1.0,
+  "level": 0.95,
+  "audit_records_per_scenario": 1,
+  "scenarios": [
+    {"duration": 10.0, "repeats": 1, "noise_sd": 1.0, "stress": "none"},
+    {"duration": 10.0, "repeats": 2, "noise_sd": 1.0, "stress": "none"},
+    {"duration": 10.0, "repeats": 1, "noise_sd": 0.0, "stress": "none"},
+    {"duration": 10.0, "repeats": 1, "noise_sd": 0.5, "stress": "colored"}
+  ]
+}
