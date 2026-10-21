@@ -1,0 +1,23 @@
+{
+  "validator_sha256": "4ca41ff3b5bff72a524b97cc2c056a483340bc35f8d67889650efb4aa415f031",
+  "bundles": {
+    "main": {
+      "records": 7000,
+      "scenarios": 14,
+      "planned_optimizer_audits": 56,
+      "posthoc_extremes": 0,
+      "archive_sha256": "4112bb57ae1e6374405ff64edac3ea4296d5b2d8cf5db898041b10e4176a6c38",
+      "config_sha256": "f5afee8d5f6c185fe5407939fb9fa9e572c52966796208a39790ecd1ef55131b",
+      "status": "pass"
+    },
+    "confirmation": {
+      "records": 2000,
+      "scenarios": 2,
+      "planned_optimizer_audits": 8,
+      "posthoc_extremes": 2,
+      "archive_sha256": "e45879d27a2dc23a4ebb1434e78e824f28756d4544cbb6bfa7389070551d34b4",
+      "config_sha256": "713a377510812cb468752ed37e9e6443d887aba3768ba2f546e13eee1229704f",
+      "status": "pass"
+    }
+  }
+}

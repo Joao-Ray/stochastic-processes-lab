@@ -1,6 +1,7 @@
 # Stochastic Processes Lab
 
 [![Tests](https://github.com/Joao-Ray/stochastic-processes-lab/actions/workflows/tests.yml/badge.svg)](https://github.com/Joao-Ray/stochastic-processes-lab/actions/workflows/tests.yml)
+[![Archive integrity](https://github.com/Joao-Ray/stochastic-processes-lab/actions/workflows/archive-integrity.yml/badge.svg)](https://github.com/Joao-Ray/stochastic-processes-lab/actions/workflows/archive-integrity.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 Numerical experiments and visualizations for stochastic processes, probability, and Monte Carlo methods.
@@ -143,6 +144,21 @@ are retained. Correct noise modeling does not supply a uniform coverage guarante
 [Noisy-model working paper](subprojects/ou-inference-study/paper/MEASUREMENT_ERROR_SUPPLEMENT.md) ·
 [Main report](subprojects/ou-inference-study/measurement-error/results/main/report.md) ·
 [Submission-readiness review](subprojects/ou-inference-study/SUBMISSION_READINESS_ZH.md)
+
+An [independent archive checker](notes/ARCHIVE_VALIDATION.md) recomputes the
+noisy-study summaries from all 9,000 records using only the Python standard
+library. It verifies provenance, distinct availability denominators, paired
+metrics, tail contributions and optimizer-audit evidence without rerunning
+likelihood optimization. Corruption tests check that inconsistent records or
+summaries fail even when their archive checksums are refreshed.
+
+```bash
+python scripts/verify_noise_results.py
+```
+
+The [中文证据与阅读指南](notes/RESEARCH_EVIDENCE_ZH.md) maps the research claims
+to their evidence, explains noise-induced regression distortion, and separates
+empirical coverage from proved coverage and software consistency.
 
 ```bash
 python subprojects/ou-inference-study/run.py

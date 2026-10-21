@@ -73,6 +73,12 @@ itself be unstable when squared errors concentrate in a few records.
 
 ## Reproduce
 
+To check the committed result archives without third-party packages or a new
+simulation, run `python scripts/verify_noise_results.py` from the repository root.
+See the [verification scope and limitations](../../../notes/ARCHIVE_VALIDATION.md).
+This recomputes summaries from the archived records; it does not certify model
+assumptions, global optima or uniform coverage.
+
 Use the root requirements and Python 3.11 or newer, from the repository root:
 
 ```bash

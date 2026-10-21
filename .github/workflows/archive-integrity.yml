@@ -1,0 +1,27 @@
+name: Archive integrity
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.11", "3.13", "3.14"]
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Check every archived noisy-OU record and summary
+        run: python scripts/verify_noise_results.py --output /tmp/noisy-archive-validation.json
+      - name: Reject corrupted summaries, records and audit evidence
+        run: python -m unittest discover -s tests -p test_result_integrity.py -v
