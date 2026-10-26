@@ -74,6 +74,13 @@ installation. The existing [Tests workflow](../.github/workflows/tests.yml)
 continues to execute the full numerical experiments. A fast consistency check
 and a new numerical execution answer different questions.
 
+The same workflow also verifies the later
+[independent-design comparison](../subprojects/ou-inference-study/measurement-error/DESIGN_COMPARISON.md).
+Its `python scripts/compare_noise_designs.py --check` command recomputes the
+eight archived confirmation contrasts and rejects stale JSON/Markdown. The
+associated tests check the independent-sample bound, boundary counts, failure
+denominators and report drift. This is a secondary analysis of existing data.
+
 ## Recorded verification of the previous scientific commit
 
 The [full numerical workflow for commit 3ffe120](https://github.com/Joao-Ray/stochastic-processes-lab/actions/runs/38842613851)
@@ -81,3 +88,8 @@ completed successfully on all three Python versions. That is verification of
 that scientific source revision, not a statement about future commits or a
 statistical proof. This archive checker adds a separately runnable check of
 the published records and reported summaries.
+
+The [full workflow for c2f47d7](https://github.com/Joao-Ray/stochastic-processes-lab/actions/runs/39526882336)
+also completed successfully on Python 3.11, 3.13 and 3.14, including the archive
+tests and full numerical reproductions. The design comparison was added after
+that commit; its verification belongs to its own revision.

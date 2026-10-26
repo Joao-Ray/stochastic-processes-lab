@@ -145,6 +145,13 @@ are retained. Correct noise modeling does not supply a uniform coverage guarante
 [Main report](subprojects/ou-inference-study/measurement-error/results/main/report.md) ·
 [Submission-readiness review](subprojects/ou-inference-study/SUBMISSION_READINESS_ZH.md)
 
+The [fixed-budget design comparison](subprojects/ou-inference-study/measurement-error/results/confirmation/design_comparison.md)
+quantifies independent-sample Monte Carlo uncertainty for all eight
+coverage/availability contrasts in final confirmation. It retains failed
+attempts, reports conservative simultaneous bounds, and keeps conditional
+RMSE separate from unconditional risk. The [derivation and precision budget](subprojects/ou-inference-study/measurement-error/DESIGN_COMPARISON.md)
+identify the assumptions and label this as retrospective analysis.
+
 An [independent archive checker](notes/ARCHIVE_VALIDATION.md) recomputes the
 noisy-study summaries from all 9,000 records using only the Python standard
 library. It verifies provenance, distinct availability denominators, paired

@@ -44,6 +44,14 @@ colored error and a fixed initial state. Confirmation uses a new seed and
 separate. Methods are paired within a record; different designs have independent
 data, so cross-design differences require independent-sample uncertainty.
 
+The [independent-design comparison](results/confirmation/design_comparison.md)
+adds that uncertainty for all four methods in the final confirmation. Eight
+coverage/availability contrasts use one simultaneous Hoeffding bound; the
+[derivation](DESIGN_COMPARISON.md) states its assumptions and conservative
+precision budget. This is a retrospective analysis of the same records.
+Conditional RMSE is reported with its finite-estimate denominator and does
+not establish an unconditional ranking of the sampling designs.
+
 Reports retain point-estimate availability, conditional bias/RMSE and MC SE,
 paired squared-error differences, all-attempt and available-test coverage,
 Wilson intervals, variance estimates and optimizer/white/cap flags. Every
@@ -87,6 +95,8 @@ python subprojects/ou-inference-study/measurement-error/run.py --config subproje
 python subprojects/ou-inference-study/measurement-error/tail_analysis.py
 python subprojects/ou-inference-study/measurement-error/tail_analysis.py --results subprojects/ou-inference-study/measurement-error/results/confirmation
 python subprojects/ou-inference-study/measurement-error/diagnose_extremes.py
+python scripts/compare_noise_designs.py
+python scripts/compare_noise_designs.py --check
 ```
 
 Use a separate `--output scratch/noisy-test` for trial runs. A reduced
