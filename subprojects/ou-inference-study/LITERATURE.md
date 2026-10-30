@@ -81,3 +81,6 @@ The [2026-10-30 targeted prior-art check](paper/PRIOR_ART_AND_NEXT_STUDY.md)
 adds an exact finite-sample OU distribution working paper and a recent noisy OU
 state-space preprint, and records a thesis chapter that remains inaccessible.
 It defines a falsifiable candidate research question without claiming novelty.
+The Bao working paper has a [2017 journal version](https://doi.org/10.1080/07474938.2017.1307977).
+A closer comparison with the preprint's profile likelihood and coverage table
+is included in the same check; no head-to-head replication has been run.

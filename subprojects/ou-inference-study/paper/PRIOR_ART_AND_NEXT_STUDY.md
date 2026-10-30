@@ -32,10 +32,45 @@ search result. See also the earlier [literature map](../LITERATURE.md).
 
 | Source and access | Relevant established material | Relevance and outstanding check |
 | --- | --- | --- |
-| Bao, Ullah and Wang, [2014 working paper](https://economics.ucr.edu/repec/ucr/wpaper/201413.pdf), abstract and introduction inspected | Exact finite-sample distribution calculations for an OU mean-reversion estimator, including different initial conditions and drift specifications; interval construction is discussed. | A close comparator for the **noise-free** stage. Match its exact estimator, conditioning and assumptions before claiming a comparison or extension. This review does not establish its publication history. |
-| Li, Kenney and Gu, [arXiv:2610.25266](https://arxiv.org/abs/2610.25266), abstract and introduction inspected | OU state-space model with measurement error, likelihood estimation and profile intervals, with microbiome applications and change testing. | Closely overlaps the noisy OU likelihood and profile-inference theme. It is a preprint; its treatment of finite-sample coverage, nuisance parameters, and replicated observations needs a section-by-section comparison before any priority claim. |
+| Bao, Ullah and Wang, [2017 journal article](https://doi.org/10.1080/07474938.2017.1307977), publisher abstract and [2014 working version](https://economics.ucr.edu/repec/ucr/wpaper/201413.pdf) inspected | Exact finite-sample distribution calculations for an OU mean-reversion estimator, including different initial conditions and drift specifications; the working version discusses interval construction. | A close comparator for the **noise-free** stage. Match its exact estimator, conditioning and assumptions before claiming a comparison or extension. The journal article's full text has not been inspected. |
+| Li, Kenney and Gu, [arXiv:2610.25266v1](https://arxiv.org/html/2610.25266v1), sections 2.3 and 3.3–3.4 inspected | Noisy OU state-space likelihood, profile intervals, simulation-based coverage and width, plus microbiome applications. | Closely overlaps noisy OU likelihood and profile inference. It is a preprint; replicated-observation handling and numerical failures require further inspection before any priority claim. |
 | Li, [*On Ornstein-Uhlenbeck State Space Models*](https://dalspaceb.library.dal.ca/server/api/core/bitstreams/f987142c-dea0-4883-a2be-1c1e99e61ce9/content), thesis PDF search-indexed excerpt only | The indexed excerpt mentions sampling designs, replication at time points and a fixed total sample size. | Potentially very close to our replication design. The full PDF timed out; do not claim a precise theorem comparison until the relevant chapter is obtained and read. |
 | Chen, Simpson and Ying, [Statistica Sinica paper](https://www3.stat.sinica.edu.tw/statistica/oldpdf/A10n17.pdf), previously inspected and recorded in the [literature map](../LITERATURE.md) | Gaussian OU covariance with independent measurement error and fixed-domain estimation. | Check which covariance combinations are identifiable before proposing uniform precision for separate drift and variance parameters. |
+
+## Closer comparison: noisy profile likelihood
+
+In sections 3.3–3.4 of Li, Kenney and Gu, the likelihood is evaluated with a
+Kalman filter. At fixed drift, the mean and both variance parameters are
+optimized; the profile set uses a chi-square(1) cutoff. Their table reports
+200 simulated data sets per N, at drift 1, stationary variance 1, measurement
+error variance 1 and mean 0. N=100, 500, 1000 and 5000 are reported with
+profile coverage of 93%, 96.5%, 95% and 94%, respectively, and median and
+interquartile range of interval widths on the log-drift scale. The authors'
+section 2.3 separately states a unit time step for its estimator simulations;
+do not assume that time-step statement also specifies the coverage table
+without further verification.
+
+The preprint states in section 3.3 that the procedure has correct finite-sample
+coverage. That is the authors' claim; the chi-square cutoff and the numerical
+table alone do not prove uniform finite-sample coverage. A proof under stated
+assumptions was not identified in the sections inspected. This is not a claim
+that no proof exists elsewhere in the paper or literature.
+
+Our final confirmation uses T=10, a fixed 200-reading budget and two independent
+designs (one or two simultaneous readings per time). It records successful
+membership at the generating value for ML and REML and reports failures;
+it does not compute full noisy confidence-set widths across all records.
+The preprint and repository therefore share a closely related likelihood/profile
+baseline but have different reported designs and outputs. Their reported
+percentages cannot be treated as a head-to-head comparison. A fair comparison
+requires matched observation times, initial distribution, nuisance handling,
+interval endpoints, optimizer conventions and failure denominators.
+
+For example, 93% coverage from 200 simulations has plug-in Monte Carlo standard
+error approximately sqrt(.93*.07/200)=1.8 percentage points. This describes
+simulation variability at that design; it is not a confidence guarantee for
+the underlying inferential method. No independent replication of the paper's
+table has been run here.
 
 ## Candidate claim to test, not an established result
 
@@ -67,10 +102,10 @@ space requires its own justification.
 
 1. Retrieve and extract the thesis chapter, including model, grid, estimands,
    objective and main results; document differences and overlaps explicitly.
-2. Verify whether the Bao working paper has a later peer-reviewed version and
-   read the relevant derivation and interval-construction sections.
-3. Inspect the Li–Kenney–Gu preprint's confidence-set construction and
-   simulation designs in full, including boundary and missing-fit handling.
+2. Read the published Bao article's full derivation and compare its estimator
+   and intervals with the earlier working version and this repository.
+3. Inspect remaining Li–Kenney–Gu simulation details, including observation
+   spacing, boundary handling, missing fits, and reproducibility of width results.
 4. Conduct a documented search in appropriate bibliographic databases, with
    inclusion criteria and records of excluded and unavailable reports. This
    exploratory web search cannot establish priority.
