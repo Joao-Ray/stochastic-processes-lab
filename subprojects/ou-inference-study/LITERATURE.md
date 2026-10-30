@@ -76,3 +76,8 @@ two-point arguments. Those tools are standard. A selected literature search
 still cannot certify a novel theorem, algorithm or sampling design. The
 [submission-readiness review](SUBMISSION_READINESS_ZH.md) records remaining
 contribution and external-review gaps.
+
+The [2026-10-30 targeted prior-art check](paper/PRIOR_ART_AND_NEXT_STUDY.md)
+adds an exact finite-sample OU distribution working paper and a recent noisy OU
+state-space preprint, and records a thesis chapter that remains inaccessible.
+It defines a falsifiable candidate research question without claiming novelty.
