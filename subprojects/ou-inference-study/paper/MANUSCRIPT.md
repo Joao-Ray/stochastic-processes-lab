@@ -41,28 +41,45 @@ finite-window inference; measurement error; Monte Carlo uncertainty.
 
 ## 1. Introduction and positioning
 
-The OU process is a tractable setting in which an exact transition law does not
-automatically give reliable small-sample inference. Its Gaussian transitions
-produce a regression representation, but estimated mean reversion can be
-strongly affected by elapsed record duration and boundary behavior. Existing
-diffusion-bias and bootstrap-correction research includes
-[Tang and Chen (2009)](https://doi.org/10.1016/j.jeconom.2008.11.001).
-[Yu (2012)](https://doi.org/10.1016/j.jeconom.2012.01.004) studies weak-reversion
-bias with a known equilibrium mean; our mean remains unknown.
+The mean-reversion speed of an Ornstein–Uhlenbeck (OU) process describes the
+rate at which perturbations decay. Estimating that speed from a short record is
+challenging even when the Gaussian transition law is known. Increasing sampling
+frequency and extending the observation window address different sources of
+uncertainty, while an estimated discrete-time slope can fall outside the range
+that corresponds to a positive finite OU speed.
 
-Parameter uncertainty and sampling design have also been investigated by
-[Strey (2019)](https://doi.org/10.1103/PhysRevE.100.062142).
-Measurement-noise corrections are addressed in
-[Calderon (2013)](https://doi.org/10.1103/PhysRevE.88.012707).
-We therefore do not present bootstrap correction, OU interval estimation,
-or measurement-error bias as new ideas.
+Prior work has examined these difficulties from complementary directions.
+[Tang and Chen (2009)](https://doi.org/10.1016/j.jeconom.2008.11.001)
+study bias and variance in diffusion estimation and propose bootstrap bias
+correction. [Yu (2012)](https://doi.org/10.1016/j.jeconom.2012.01.004)
+analyzes mean-reversion bias when the long-run mean is known. The distribution
+of the OU speed estimator has also been studied directly by
+[Bao, Ullah and Wang (2017)](https://doi.org/10.1080/07474938.2017.1307977),
+under several drift and initial-value specifications. Their finite-sample
+distribution results are not reproduced by the present benchmark.
+[Strey (2019)](https://doi.org/10.1103/PhysRevE.100.062142) examines OU
+parameter uncertainty and the choice of observation spacing.
 
-The present objective is narrower: produce an auditable comparison that retains
-failures and explains how a high conditional coverage may coexist with frequent
-unavailability or uninformative confidence sets. A second objective separates
-denser sampling from longer observation using the same latent trajectories.
-The protocol and reporting use the simulation-study organization described by
-[Morris, White and Crowther (2019)](https://doi.org/10.1002/sim.8086).
+Observation error adds a separate modeling difficulty. For example,
+[Calderon (2013)](https://doi.org/10.1103/PhysRevE.88.012707) considers
+finite-series bias with measurement noise, and
+[Chen, Simpson and Ying (2000)](https://www3.stat.sinica.edu.tw/statistica/oldpdf/A10n17.pdf)
+study a stochastic-process model with measurement error under infill
+asymptotics. Our measurement-error scenarios deliberately fit a noise-free
+model to noisy data; they illustrate misspecification rather than evaluate a
+noise-corrected interval. The separate [measurement-error supplement](MEASUREMENT_ERROR_SUPPLEMENT.md)
+studies a noise-aware likelihood.
+
+The question addressed here is how four familiar interval procedures behave
+over the selected finite observation windows when the equilibrium mean is
+unknown. We compare their coverage together with fit availability and
+unbounded sets, because coverage conditional on a successful fit does not
+describe the outcome of every attempted analysis. Paired observation grids
+also permit comparisons of sampling frequency and elapsed duration using shared
+latent trajectories. The design and reporting follow simulation-study
+principles described by [Morris, White and Crowther (2019)](https://doi.org/10.1002/sim.8086).
+This is a reproducible benchmark of specified designs, not a claim that any
+procedure has uniform finite-sample coverage or that the compared methods are new.
 
 ## 2. Model and conditional inference
 
@@ -297,3 +314,5 @@ Full machine-readable entries are in [references.bib](references.bib).
 3. Calderon, C. P. (2013). Correcting for bias of molecular confinement parameters induced by small time series sample sizes in single-molecule trajectories containing measurement noise. *Physical Review E*, 88, 012707. [DOI](https://doi.org/10.1103/PhysRevE.88.012707).
 4. Strey, H. H. (2019). On the estimation of parameters from time traces originating from an Ornstein–Uhlenbeck process. *Physical Review E*, 100, 062142. [DOI](https://doi.org/10.1103/PhysRevE.100.062142).
 5. Morris, T. P., White, I. R., & Crowther, M. J. (2019). Using simulation studies to evaluate statistical methods. *Statistics in Medicine*, 38(11), 2074–2102. [DOI](https://doi.org/10.1002/sim.8086).
+6. Bao, Y., Ullah, A., & Wang, Y. (2017). Distribution of the mean reversion estimator in the Ornstein–Uhlenbeck process. *Econometric Reviews*, 36(6–9), 1039–1056. [DOI](https://doi.org/10.1080/07474938.2017.1307977).
+7. Chen, H.-S., Simpson, D. G., & Ying, Z. (2000). Infill asymptotics for a stochastic process model with measurement error. *Statistica Sinica*, 10, 141–156. [Article](https://www3.stat.sinica.edu.tw/statistica/oldpdf/A10n17.pdf).
